@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - All in One</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg-color: #3b302c;
+            --text-light-color: #f0f0f0;
+            --text-primary-color: #e4c4a4;
+            --btn-bg-color: #e4c4a4;
+            --btn-text-color: #3b302c;
+        }
+
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and HTML styling for full viewport and overflow control */
+        html {
+            height: 100%;
+            /* Ensure html takes full height */
+        }
+
+        body {
+            height: 100%;
+            /* Ensure body takes full height */
+            overflow-y: hidden;
+            /* Prevent vertical scrolling for the main body */
+            overflow-x: auto;
+            /* Allow horizontal scrolling for the main body */
+            scroll-behavior: smooth;
+            /* Smooth scroll when navigating to anchors */
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-light-color);
+            background-color: var(--primary-bg-color);
+            display: flex;
+            /* Use flexbox for main content layout */
+            flex-direction: column;
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(59, 48, 44, 0.8);
+            position: fixed;
+            /* Keep header fixed at the top */
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            /* Ensure header is on top of other content */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-light-color);
+        }
+
+        .logo i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: var(--text-light-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-light-color);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 5px;
+            cursor: pointer;
+            /* Indicate clickable links */
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--text-primary-color);
+        }
+
+        nav ul li a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-primary-color);
+        }
+
+        /* Wrapper for all pages to enable horizontal sliding */
+        #pages-wrapper {
+            display: flex;
+            /* Arrange sections horizontally */
+            width: 400vw;
+            /* 100vw * number of sections (4 sections) */
+            margin-top: 80px;
+            /* Space for fixed header */
+            flex-grow: 1;
+            /* Allow it to take available height */
+        }
+
+        /* Styling for each individual page section */
+        .page-section {
+            min-width: 100vw;
+            /* Each section takes full viewport width */
+            min-height: calc(100vh - 80px - 60px);
+            /* Min height (viewport - header - footer) */
+            max-height: calc(100vh - 80px - 60px);
+            /* Max height to fit viewport */
+            overflow-y: auto;
+            /* Allow vertical scrolling within the section */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            /* Align content to top */
+            position: relative;
+            /* For positioning hero-content over slider */
+            padding: 20px 5%;
+            /* Default padding for all sections */
+        }
+
+        /* Home Section Specifics (now contains slider) */
+        #home-section {
+            padding: 0;
+            /* Remove padding as slider will fill */
+            min-height: 100vh;
+            /* Home section should still take full viewport height for hero effect */
+            max-height: 100vh;
+            /* Ensure it doesn't exceed viewport */
+            justify-content: flex-start;
+            /* Align content to top for hero */
+        }
+
+        .slider-container {
+            width: 100%;
+            height: 100%;
+            /* Full height of home section */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slider-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 50px;
+            /* Set fixed width */
+            height: 50px;
+            /* Set fixed height, equal to width for perfect circle */
+            display: flex;
+            /* Use flexbox to center icon */
+            align-items: center;
+            /* Center icon vertically */
+            justify-content: center;
+            /* Center icon horizontally */
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 50;
+            border-radius: 50%;
+            /* Make it circular */
+            transition: background 0.3s ease;
+        }
+
+        .slider-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        .dots-container {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 50;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: var(--text-primary-color);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            max-width: 500px;
+            z-index: 60;
+            text-align: left;
+            padding: 20px;
+            background-color: rgba(59, 48, 44, 0.6);
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--text-light-color);
+            margin: 0;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            margin-top: -10px;
+            color: var(--text-primary-color);
+        }
+
+        .hero-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 30px;
+            color: var(--text-primary-color);
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--text-primary-color);
+            margin: 20px 0;
+        }
+
+        .hero-content h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-light-color);
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: var(--text-light-color);
+        }
+
+        .more-info-btn {
+            background-color: var(--btn-bg-color);
+            color: var(--btn-text-color);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .more-info-btn:hover {
+            background-color: #d1b294;
+        }
+
+        /* About Section Specifics */
+        #about-section {
+            background-color: var(--primary-bg-color);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 20px;
+            /* Add some top margin to content */
+            margin-bottom: 20px;
+        }
+
+        .about-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--text-primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Menu Section Specifics */
+        #menu-section {
+            background-color: var(--primary-bg-color);
+        }
+
+        #menu-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--text-primary-color);
+            margin-bottom: 40px;
+            text-align: center;
+            margin-top: 20px;
+            /* Add some top margin to content */
+        }
+
+        .menu-category {
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 50px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .menu-category h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--text-light-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .item-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary-color);
+        }
+
+        .item-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light-color);
+        }
+
+        .item-description {
+            font-size: 0.95rem;
+            color: var(--text-light-color);
+            line-height: 1.5;
+        }
+
+        /* Contact Section Specifics */
+        #contact-section {
+            background-color: var(--primary-bg-color);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 20px;
+            /* Add some top margin to content */
+            margin-bottom: 20px;
+        }
+
+        .contact-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--text-primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: var(--text-light-color);
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-form button {
+            background-color: var(--btn-bg-color);
+            color: var(--btn-text-color);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #d1b294;
+        }
+
+        /* Footer styling */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(59, 48, 44, 0.8);
+            width: 100vw;
+            /* Ensure footer spans full viewport width */
+            box-sizing: border-box;
+            position: fixed;
+            /* Keep footer fixed at the bottom */
+            bottom: 0;
+            z-index: 1000;
+        }
+
+        .social-icons a {
+            color: var(--text-light-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--text-primary-color);
+        }
+
+        .delivery-info {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .delivery-info i {
+            margin-right: 10px;
+            color: var(--text-primary-color);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            nav ul li {
+                margin: 0 15px 10px 0;
+            }
+
+            .hero-content {
+                position: relative;
+                transform: translateY(0);
+                top: auto;
+                left: auto;
+                margin-top: 0;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .hero-content h1,
+            .about-content h1,
+            #menu-section h1,
+            .contact-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero-content h3 {
+                font-size: 1rem;
+            }
+
+            .hero-content h4 {
+                font-size: 1.2rem;
+            }
+
+            .about-content p,
+            .contact-content p {
+                font-size: 1rem;
+            }
+
+            .menu-category h2 {
+                font-size: 2rem;
+            }
+
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                padding-bottom: 20px;
+            }
+
+            .social-icons {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            header,
+            footer,
+            .page-section {
+                padding: 15px 3%;
+            }
+
+            .logo {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                width: 100%;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 10px 10px 0;
+            }
+
+            .hero-content,
+            .about-content,
+            .menu-category,
+            .contact-content {
+                padding: 20px;
+            }
+
+            .hero-content h1,
+            .about-content h1,
+            #menu-section h1,
+            .contact-content h1 {
+                font-size: 2rem;
+            }
+
+            .more-info-btn,
+            .contact-form button {
+                width: 100%;
+                padding: 12px 20px;
+            }
+
+            .slider-nav-btn {
+                padding: 10px;
+                font-size: 1.2rem;
+            }
+
+            .prev {
+                left: 10px;
+            }
+
+            .next {
+                right: 10px;
+            }
+
+            .dots-container {
+                bottom: 15px;
+            }
+
+            .dot {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-coffee"></i>
+            <span>COFFEE SHOP</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home-section" class="active">HOME</a></li>
+                <li><a href="#about-section">ABOUT</a></li>
+                <li><a href="#menu-section">MENU</a></li>
+                <li><a href="#contact-section">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="pages-wrapper">
+        <!-- Home Section (with Slider) -->
+        <section id="home-section" class="page-section">
+            <div class="slider-container">
+                <div class="slides">
+                    <div class="slide"
+                        style="background-image: url('https://placehold.co/1920x1080/3b302c/e4c4a4?text=Coffee+Slide+1');">
+                    </div>
+                    <div class="slide"
+                        style="background-image: url('https://placehold.co/1920x1080/e4c4a4/3b302c?text=Coffee+Slide+2');">
+                    </div>
+                    <div class="slide"
+                        style="background-image: url('https://placehold.co/1920x1080/5a4a42/f0f0f0?text=Coffee+Slide+3');">
+                    </div>
+                </div>
+                <button class="slider-nav-btn prev" aria-label="Previous Slide"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="slider-nav-btn next" aria-label="Next Slide"><i
+                        class="fas fa-chevron-right"></i></button>
+                <div class="dots-container">
+                    <span class="dot active" data-slide-index="0"></span>
+                    <span class="dot" data-slide-index="1"></span>
+                    <span class="dot" data-slide-index="2"></span>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Coffee Shop</h1>
+                <h2>PREMIUM</h2>
+                <h3>UP TO 60% OFF</h3>
+                <div class="divider"></div>
+                <h4>Coffee Specialists</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat.</p>
+                <button class="more-info-btn"
+                    onclick="document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });">MORE
+                    INFO</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="page-section">
+            <div class="about-content">
+                <h1>Our Story</h1>
+                <p>Welcome to Coffee Shop, where passion meets perfection in every cup. Founded in [Year], our journey
+                    began with a simple dream: to create a cozy haven where coffee lovers can savor exceptional brews
+                    and delightful treats.</p>
+                <p>We meticulously source the finest beans from sustainable farms around the globe, ensuring each sip
+                    tells a story of quality and ethical practices. Our expert baristas are dedicated to crafting unique
+                    coffee experiences, from classic espressos to innovative signature drinks.</p>
+                <p>Beyond coffee, we believe in fostering a community. It's a place to connect, unwind, and enjoy the
+                    simple pleasures of life. Come, be a part of our story, and let us share our love for coffee with
+                    you.</p>
+                <img src="https://placehold.co/600x400/3b302c/e4c4a4?text=Coffee+Shop+Interior"
+                    alt="Coffee Shop Interior" class="about-image">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Our commitment extends to providing a comfortable and inviting atmosphere, making every visit a
+                    memorable one. We believe in the power of good coffee to bring people together and brighten their
+                    day. Join us for a cup and experience the difference!</p>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu-section" class="page-section">
+            <h1>Our Delicious Menu</h1>
+
+            <div class="menu-category">
+                <h2>Coffee & Espresso</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Espresso</span>
+                            <span class="item-price">$3.00</span>
+                        </div>
+                        <p class="item-description">A concentrated shot of rich, dark coffee.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Latte</span>
+                            <span class="item-price">$4.50</span>
+                        </div>
+                        <p class="item-description">Smooth espresso with steamed milk and a thin layer of foam.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Cappuccino</span>
+                            <span class="item-price">$4.25</span>
+                        </div>
+                        <p class="item-description">Espresso with equal parts steamed milk and frothed milk.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Americano</span>
+                            <span class="item-price">$3.50</span>
+                        </div>
+                        <p class="item-description">Espresso diluted with hot water, giving it a similar strength to
+                            drip coffee.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Mocha</span>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                        <p class="item-description">Espresso with chocolate, steamed milk, and whipped cream.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Macchiato</span>
+                            <span class="item-price">$3.75</span>
+                        </div>
+                        <p class="item-description">Espresso with a dollop of frothed milk.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Pastries & Snacks</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Croissant</span>
+                            <span class="item-price">$3.20</span>
+                        </div>
+                        <p class="item-description">Flaky, buttery pastry, perfect with your coffee.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Blueberry Muffin</span>
+                            <span class="item-price">$3.80</span>
+                        </div>
+                        <p class="item-description">Moist muffin bursting with fresh blueberries.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Chocolate Chip Cookie</span>
+                            <span class="item-price">$2.50</span>
+                        </div>
+                        <p class="item-description">Classic cookie with generous chocolate chips.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Almond Croissant</span>
+                            <span class="item-price">$3.75</span>
+                        </div>
+                        <p class="item-description">Buttery croissant filled with sweet almond paste.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Scone</span>
+                            <span class="item-price">$3.00</span>
+                        </div>
+                        <p class="item-description">Traditional scone, perfect with jam and cream.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Cold Drinks</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Iced Latte</span>
+                            <span class="item-price">$4.75</span>
+                        </div>
+                        <p class="item-description">Espresso with cold milk over ice.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Cold Brew</span>
+                            <span class="item-price">$4.00</span>
+                        </div>
+                        <p class="item-description">Smooth, low-acid coffee steeped for hours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="page-section">
+            <div class="contact-content">
+                <h1>Get in Touch</h1>
+                <p>Have questions, feedback, or just want to say hello? Fill out the form below or find us at our
+                    location!</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p style="margin-top: 20px;"><strong>Our Location:</strong> 123 Coffee Lane, Brew City, CA 90210</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> info@coffeeshop.com</p>
+                <p><strong>Business Hours:</strong></p>
+                <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
+                <p>Saturday - Sunday: 8:00 AM - 5:00 PM</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="delivery-info">
+            <i class="fas fa-motorcycle"></i>
+            <span>Delivery: 054-5454-1212</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const sections = document.querySelectorAll('.page-section');
+
+            // --- Update active navigation link based on scroll position ---
+            function updateActiveNavLink () {
+                const scrollLeft = document.body.scrollLeft;
+                const viewportWidth = window.innerWidth;
+
+                sections.forEach((section, index) => {
+                    const sectionLeft = section.offsetLeft;
+                    const sectionRight = sectionLeft + section.offsetWidth;
+
+                    // Check if the current section is mostly in view
+                    // A simple check: if the scroll position is within the section's bounds
+                    // and the section is more than 50% visible in the viewport.
+                    if (scrollLeft >= sectionLeft - (viewportWidth / 2) && scrollLeft < sectionRight - (viewportWidth / 2)) {
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${section.id}`) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Add event listeners to navigation links (for direct clicks)
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default link behavior
+                    const targetId = event.target.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Handle "MORE INFO" button on home page
+            const moreInfoBtn = document.querySelector('.more-info-btn');
+            if (moreInfoBtn) {
+                moreInfoBtn.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default link behavior
+                    document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // Listen for scroll events on the body to update active nav link
+            document.body.addEventListener('scroll', updateActiveNavLink);
+            // Initial call to set active link on load
+            updateActiveNavLink();
+
+
+            // --- Slider Logic for Home Section (Internal to Home Section) ---
+            const slidesContainer = document.querySelector('.slides');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const dotsContainer = document.querySelector('.dots-container');
+            let currentSlideIndex = 0;
+            let autoSlideInterval;
+
+            // Create dots dynamically (if not already in HTML)
+            if (dotsContainer && dotsContainer.children.length === 0) {
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    dot.dataset.slideIndex = index;
+                    dotsContainer.appendChild(dot);
+                });
+            }
+
+            const dots = document.querySelectorAll('.dot'); // Get all dots after creation
+
+            function showSlide (index) {
+                if (index >= slides.length) {
+                    currentSlideIndex = 0;
+                } else if (index < 0) {
+                    currentSlideIndex = slides.length - 1;
+                } else {
+                    currentSlideIndex = index;
+                }
+
+                slidesContainer.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+
+                // Update active dot
+                dots.forEach((dot, i) => {
+                    if (i === currentSlideIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+
+            function nextSlide () {
+                showSlide(currentSlideIndex + 1);
+            }
+
+            function prevSlide () {
+                showSlide(currentSlideIndex - 1);
+            }
+
+            // Auto-slide functionality
+            function startAutoSlide () {
+                autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            }
+
+            function stopAutoSlide () {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Event listeners for slider controls
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    stopAutoSlide();
+                    prevSlide();
+                    startAutoSlide(); // Restart auto-slide after manual interaction
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    stopAutoSlide();
+                    nextSlide();
+                    startAutoSlide(); // Restart auto-slide after manual interaction
+                });
+            }
+
+            if (dotsContainer) {
+                dotsContainer.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('dot')) {
+                        stopAutoSlide();
+                        const index = parseInt(event.target.dataset.slideIndex);
+                        showSlide(index);
+                        startAutoSlide(); // Restart auto-slide after manual interaction
+                    }
+                });
+            }
+
+            // Start auto-slide when the page loads
+            startAutoSlide();
+
+            // Ensure slider is correctly displayed on initial load
+            showSlide(currentSlideIndex);
+        });
+    </script>
+</body>
+
+</html>
