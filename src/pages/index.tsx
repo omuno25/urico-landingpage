@@ -2,8 +2,7 @@ import { GetStaticProps } from 'next';
 
 import { FooterCommon } from '../common/components/common';
 import SEOHead from '../common/components/common/SEOHead';
-import { CarouselSection, NavBarSection } from '../common/components/sections';
-import MenuSection from '../common/components/sections/MenuSection';
+import { CarouselSection } from '../common/components/sections';
 import OpeningSection from '../common/components/sections/OpeningSection';
 import { useCheckMobileScreen } from '../common/hooks';
 import metadataJson from '../data/metadata.json';
