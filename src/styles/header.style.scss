@@ -1,23 +1,10 @@
 .st-header-common {
   &__container {
-    &__text-left {
-      color: var(--st-color-gray-700);
-      font-size: calc(var(--st-font-size-06) - 2px);
-      font-weight: 500;
-      padding-left: var(--st-spacing-02);
+    &__col-right {
+      color: var(--st-color-base-white);
     }
     &__col-right a:last-child span {
       display: none;
-    }
-
-    &__logo {
-      max-width: 85%;
-    }
-
-    @media only screen and (max-width: 767px) {
-      &__logo {
-        max-width: 60%;
-      }
     }
   }
 }

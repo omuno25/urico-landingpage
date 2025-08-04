@@ -1,0 +1,9 @@
+.st-opening-section {
+  &__container {
+    padding: var(--st-spacing-09) 0;
+  }
+
+  &__container__opening-image {
+    display: flex;
+  }
+}

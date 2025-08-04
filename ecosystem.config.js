@@ -22,7 +22,7 @@ if (!(argEnv in RUN_ENV_MAP)) {
 module.exports = {
   apps: [
     {
-      name: 'tram-giay-landing-page',
+      name: 'urico-coffee-landing-page',
       script: 'node_modules/next/dist/bin/next',
       args: 'start',
       instances: RUN_ENV_MAP[argEnv].instances,

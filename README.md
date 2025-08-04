@@ -50,7 +50,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Command pm2 on server:
 
-- pm2 start "npm run start" --name "tram-giay"
+- pm2 start "npm run start" --name "urico-coffee"
 - pm2 list check instance
 - pm2 stop {id} stop instance by id
 
@@ -78,7 +78,7 @@ Build on other branch
 
 New Committed
 
-- cd /home/ubuntu/tram-giay-landing-page/store-station/
+- cd /home/ubuntu/urico-coffee-landing-page/store-station/
 - git pull origin main - get lastest commit main branch
 - npm run build
 - pm2 list - show list intance

@@ -37,35 +37,23 @@
   "sectionNavbar": {
     "items": [
       {
-        "name": "Urico",
+        "name": "Trang chủ",
         "id": "urico-coffee"
       },
       {
         "name": "Menu",
         "id": "menu"
-      },
-      {
-        "name": "Không gian",
-        "id": "khong-gian"
-      },
-      {
-        "name": "Blog",
-        "id": "bai-viet"
-      },
-      {
-        "name": "Liên hệ",
-        "id": "lien-he"
       }
     ]
   },
   "sectionCarousel": {
     "banners": [
       {
-        "image": "static/bg/slide_1.webp",
-        "alt": "image"
+        "image": "assets/logos/urico_logo_light.svg",
+        "alt": "urico"
       },
       {
-        "image": "static/bg/slide_2.webp",
+        "image": "assets/images/comming-soon/image.png",
         "alt": "image"
       }
     ],
@@ -74,6 +62,26 @@
       "description": "Chào mừng đến với Urico Coffee - Nơi mỗi ly cà phê đều được pha chế với tình yêu và sự tận tâm. Urico Coffee chuyên cung cấp những ly cà phê thơm ngon từ hạt cà phê chất lượng cao, được rang xay tươi mỗi ngày. Chúng tôi cam kết mang đến cho bạn trải nghiệm cà phê tuyệt vời nhất trong không gian ấm cúng và thân thiện.",
       "mobileDescription": "Chào mừng bạn đến với Urico Coffee - Điểm đến lý tưởng cho những tín đồ yêu cà phê! Urico cam kết mang đến trải nghiệm cà phê tuyệt vời nhất với hương vị đậm đà và không gian ấm cúng."
     }
+  },
+  "sectionMenu": {
+    "images": [
+      {
+        "image": "assets/images/menu/agv_26.png",
+        "alt": "urico menu"
+      }
+    ]
+  },
+  "sectionOpening": {
+    "images": [
+      {
+        "image": "assets/images/gallery/agv_27.png",
+        "alt": "urico opening"
+      },
+      {
+        "image": "assets/images/ui/agv_29.jpeg",
+        "alt": "urico opening"
+      }
+    ]
   },
   "sectionService": {
     "heading": "Menu cà phê",

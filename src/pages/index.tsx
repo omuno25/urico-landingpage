@@ -1,23 +1,10 @@
 import { GetStaticProps } from 'next';
 
-import { FooterCommon, HeaderCommon } from '../common/components/common';
+import { FooterCommon } from '../common/components/common';
 import SEOHead from '../common/components/common/SEOHead';
-import {
-  MobileNavBarSection,
-  MobileCarouselSection,
-  MobileServiceSection,
-  MobileCleaningProcessSection,
-  MobileBlogSection,
-  MobileInformationBottomSection,
-  MobilePolicySection,
-  BlogSection,
-  CarouselSection,
-  CleaningProcessSection,
-  InformationBottomSection,
-  NavBarSection,
-  PolicySection,
-  ServiceSection,
-} from '../common/components/sections';
+import { CarouselSection, NavBarSection } from '../common/components/sections';
+import MenuSection from '../common/components/sections/MenuSection';
+import OpeningSection from '../common/components/sections/OpeningSection';
 import { useCheckMobileScreen } from '../common/hooks';
 import metadataJson from '../data/metadata.json';
 export const getStaticProps: GetStaticProps = async () => {
@@ -36,25 +23,18 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
 
       {isMobile ? (
         <main>
-          <MobileNavBarSection />
-          <MobileCarouselSection />
-          <MobileServiceSection />
-          <MobileCleaningProcessSection />
-          <MobileBlogSection />
-          <MobileInformationBottomSection />
-          <MobilePolicySection />
+          <NavBarSection />
+          <CarouselSection />
+          <MenuSection />
           <FooterCommon />
         </main>
       ) : (
         <main>
-          <HeaderCommon />
+          {/* <HeaderCommon /> */}
           <NavBarSection />
           <CarouselSection />
-          <ServiceSection />
-          <CleaningProcessSection />
-          <BlogSection />
-          <InformationBottomSection />
-          <PolicySection />
+          <OpeningSection />
+          {/* <MenuSection /> */}
           <FooterCommon />
         </main>
       )}

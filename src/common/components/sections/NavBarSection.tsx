@@ -6,7 +6,6 @@ import metadata from '../../../data/metadata.json';
 import { useStickyNavbar } from '../../hooks';
 import useScrollEvent from '../../hooks/useScrollEvent';
 import { scrollToSection } from '../../utils/scroll';
-import { SvgIcon } from '../common';
 
 const className = 'st-navbar-section';
 const prefixSection = 'section--';
@@ -32,7 +31,7 @@ const NavBarSection: React.FC = () => {
     }
   }, [router]);
 
-  const handleLinkClick = (section: string) => {
+  const handleSelectNavBar = (section: string) => {
     scrollToSection(section);
   };
 
@@ -43,7 +42,7 @@ const NavBarSection: React.FC = () => {
           <Nav>
             {metadata.sectionNavbar.items.map((item, i) => (
               <Nav.Link
-                onClick={() => handleLinkClick(`${prefixSection + item.id}`)}
+                onClick={() => handleSelectNavBar(`${prefixSection + item.id}`)}
                 key={i}
                 className={`${activeSection === `${prefixSection + item.id}` ? 'active' : ''}`}
                 active={false}
@@ -51,9 +50,7 @@ const NavBarSection: React.FC = () => {
                 <Stack>
                   <span
                     className={`text-center ${activeSection === `${prefixSection + item.id}` ? 'visible' : 'invisible'}`}
-                  >
-                    <SvgIcon id="clean" size="21" className="align-bottom" />
-                  </span>
+                  ></span>
                   {item.name}
                 </Stack>
               </Nav.Link>

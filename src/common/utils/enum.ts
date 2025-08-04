@@ -1,5 +1,5 @@
 export enum SectionName {
-  station = 'tram-giay',
+  station = 'urico-coffee',
   service = 'dich-vu',
   process = 'quy-trinh',
   blog = 'bai-viet',

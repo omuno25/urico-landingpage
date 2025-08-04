@@ -1,0 +1,11 @@
+.st-menu-section {
+  &__container {
+    padding: var(--st-spacing-09) 0;
+  }
+
+  &__container__menu-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

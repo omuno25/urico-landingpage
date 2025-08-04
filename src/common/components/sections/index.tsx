@@ -2,6 +2,7 @@ import BlogSection from './BlogSection';
 import CarouselSection from './CarouselSection';
 import CleaningProcessSection from './CleaningProcessSection';
 import InformationBottomSection from './InformationBottomSection';
+import MenuSection from './MenuSection';
 import MobileBlogSection from './MobileBlogSection';
 import MobileCarouselSection from './MobileCarouselSection';
 import MobileCleaningProcessSection from './MobileCleaningProcessSection';
@@ -27,4 +28,5 @@ export {
   MobileBlogSection,
   MobileInformationBottomSection,
   MobilePolicySection,
+  MenuSection,
 };

@@ -27,6 +27,8 @@ import '../styles/mobile-information-bottom.style.scss';
 import '../styles/mobile-policy.style.scss';
 import '../styles/swiper-grid-image.style.scss';
 import '../styles/icon-arrow-rounded.scss';
+import '../styles/menu.style.scss';
+import '../styles/opening-style.scss';
 
 const inter = Inter({
   subsets: ['latin'],

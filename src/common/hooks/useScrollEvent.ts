@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 import metadata from '../../data/metadata.json';
 
-const defaultSection = metadata.sectionNavbar.items[0].id || 'tram-giay';
+const defaultSection = metadata.sectionNavbar.items[0].id || 'urico-coffee';
 
 const useScrollEvent = () => {
   const [activeSection, setActiveSection] = useState(
