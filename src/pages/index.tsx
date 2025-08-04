@@ -23,15 +23,15 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
 
       {isMobile ? (
         <main>
-          <NavBarSection />
+          {/* <NavBarSection /> */}
           <CarouselSection />
-          <MenuSection />
+          <OpeningSection />
           <FooterCommon />
         </main>
       ) : (
         <main>
           {/* <HeaderCommon /> */}
-          <NavBarSection />
+          {/* <NavBarSection /> */}
           <CarouselSection />
           <OpeningSection />
           {/* <MenuSection /> */}
