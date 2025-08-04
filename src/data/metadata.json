@@ -3,31 +3,31 @@
     "altImage": "image"
   },
   "headerTag": {
-    "title": "Trạm giày",
-    "description": "Trạm Giày – Dịch vụ vệ sinh, phục hồi và sửa chữa giày dép, túi xách chuyên nghiệp. Chăm sóc từng chi tiết, mang lại vẻ đẹp hoàn hảo cho phụ kiện yêu thích của bạn",
+    "title": "Urico Coffee",
+    "description": "Urico Coffee – Quán cà phê chuyên nghiệp với không gian ấm cúng, phục vụ những ly cà phê thơm ngon từ hạt cà phê chất lượng cao. Nơi lý tưởng để thư giãn, làm việc và kết nối với bạn bè.",
     "icon": "favicon/favicon.svg"
   },
   "information": {
-    "phoneNumber": "0938075264",
-    "address": "257 Phan Văn Trị P.11 Quận Bình Thạnh HCM",
-    "email": "sharkdew209@gmail.com"
+    "phoneNumber": "0967325391",
+    "address": "107 Cù Lao, Phường 2, Phú Nhuận, Hồ Chí Minh",
+    "email": "support@urico.vn"
   },
   "socials": [
     {
       "iconId": "facebook",
-      "href": "https://www.facebook.com/tramgiay20901"
+      "href": "https://www.facebook.com/uricocoffee"
     },
     {
       "iconId": "instagram",
-      "href": "https://www.instagram.com/"
+      "href": "https://www.instagram.com/uricocoffee"
     },
     {
       "iconId": "tiktok",
-      "href": "https://www.tiktok.com/vi-VN/"
+      "href": "https://www.tiktok.com/@uricocoffee"
     },
     {
       "iconId": "youtube",
-      "href": "https://www.youtube.com/?app=desktop&hl=vi"
+      "href": "https://www.youtube.com/@uricocoffee"
     }
   ],
   "sectionHeader": {
@@ -37,16 +37,16 @@
   "sectionNavbar": {
     "items": [
       {
-        "name": "Trạm",
-        "id": "tram-giay"
+        "name": "Urico",
+        "id": "urico-coffee"
       },
       {
-        "name": "Dịch vụ",
-        "id": "dich-vu"
+        "name": "Menu",
+        "id": "menu"
       },
       {
-        "name": "Quy trình",
-        "id": "quy-trinh"
+        "name": "Không gian",
+        "id": "khong-gian"
       },
       {
         "name": "Blog",
@@ -71,38 +71,38 @@
     ],
     "middleContent": {
       "icon": "static/icons/icon-uppercase.svg",
-      "description": "Chào mừng đến với Trạm Giày - Đến với Trạm, bạn sẽ bất ngờ khi thấy đôi giày đã sử dụng lâu của mình trở nên như mới. Trạm Giày chuyên cung cấp giải pháp chăm sóc giày tiện lợi và toàn diện, bao gồm: vệ sinh, sửa chữa, phục hồi, bảo vệ, và custom cho tất cả các dòng giày. Chúng tôi cam kết sử dụng chất liệu cao cấp, kỹ thuật hiện đại cùng với dịch vụ chuyên nghiệp để giữ cho đôi giày của bạn luôn trong tình trạng tốt nhất.",
-      "mobileDescription": "Chào mừng bạn đến với Trạm Giày - Điểm đến chuyên nghiệp cho vệ sinh, sửa chữa, phục hồi, bảo vệ, và custom giày dép! Trạm cam kết cung cấp trải nghiệm dịch vụ tốt nhất, là điểm đến tin cậy cho những người yêu giày "
+      "description": "Chào mừng đến với Urico Coffee - Nơi mỗi ly cà phê đều được pha chế với tình yêu và sự tận tâm. Urico Coffee chuyên cung cấp những ly cà phê thơm ngon từ hạt cà phê chất lượng cao, được rang xay tươi mỗi ngày. Chúng tôi cam kết mang đến cho bạn trải nghiệm cà phê tuyệt vời nhất trong không gian ấm cúng và thân thiện.",
+      "mobileDescription": "Chào mừng bạn đến với Urico Coffee - Điểm đến lý tưởng cho những tín đồ yêu cà phê! Urico cam kết mang đến trải nghiệm cà phê tuyệt vời nhất với hương vị đậm đà và không gian ấm cúng."
     }
   },
   "sectionService": {
-    "heading": "Các dịch vụ",
-    "description": " Trạm cung cấp đa dạng dịch vụ, bao gồm vệ sinh giày dép chuyên nghiệp cho mọi chất liệu như da, vải, da lộn, phục hồi giày cũ, xử lý vết ố vàng, sờn mòn để chúng trở lại như mới. Ngoài ra, Trạm còn sửa chữa giày dép các loại như thay đế, gót, quai, móc khóa và nhuộm màu, đánh xi, bảo dưỡng. Đội ngũ chuyên gia của chúng tôi cũng có khả năng custom giày theo yêu cầu trên mọi chất liệu, đảm bảo mang lại sự hài lòng cho khách hàng.",
-    "mobileDescription": "Trạm cung cấp đa dạng dịch vụ bảo dưỡng giày và túi xách - Cam kết chúng trở lại như mới.",
+    "heading": "Menu cà phê",
+    "description": "Urico Coffee cung cấp đa dạng menu cà phê, từ những ly espresso đậm đà, cappuccino mềm mại đến cold brew mát lạnh. Chúng tôi sử dụng hạt cà phê chất lượng cao được rang xay tươi mỗi ngày, kết hợp với kỹ thuật pha chế chuyên nghiệp để tạo ra những ly cà phê hoàn hảo. Ngoài cà phê, Urico còn phục vụ các loại trà, bánh ngọt và món ăn nhẹ để bạn có thể thưởng thức trọn vẹn.",
+    "mobileDescription": "Urico Coffee cung cấp đa dạng menu cà phê chất lượng cao - Cam kết hương vị tuyệt vời.",
     "tabs": [
       {
-        "title": "Vệ sinh",
-        "key": "clean",
+        "title": "Cà phê nóng",
+        "key": "hot-coffee",
         "details": [
           {
-            "title": "Vệ sinh cơ bản",
-            "price": "70.000đ",
-            "description": "Sử dụng các sản phẩm và kỹ thuật tiên tiến để loại bỏ hoàn toàn bụi bẩn và mùi hôi từ bề mặt và bên trong giày một cách cẩn thận và tỉ mỉ, đảm bảo rằng giày bạn luôn trong tình trạng tốt nhất"
+            "title": "Espresso",
+            "price": "35.000đ",
+            "description": "Ly espresso đậm đà được pha từ hạt cà phê Arabica chất lượng cao, mang đến hương vị tinh túy và đặc trưng của cà phê Ý."
           },
           {
-            "title": "Vệ sinh siêu tốc",
-            "price": "110.000đ",
-            "description": "Là lựa chọn hoàn hảo cho bạn khi cần dịch vụ nhanh chóng và hiệu quả. Đôi giày của bạn sẽ được làm sạch và thơm tho chỉ trong24 giờ."
+            "title": "Americano",
+            "price": "40.000đ",
+            "description": "Cà phê Americano với vị đắng nhẹ, thơm ngon, phù hợp cho những ai yêu thích hương vị cà phê truyền thống."
           },
           {
-            "title": "Vệ sinh dép, giày trẻ em",
-            "price": "45.000đ",
-            "description": "Trạm Giày sử dụng các sản phẩm và phương pháp nhẹ nhàng, không gây kích ứng da, loại bỏ bụi bẩn và mùi hôi, bảo vệ độ bền của đôi giày. Cam kết đem lại sự an toàn và sạch sẽ cho làn da mỏng mịn màng của bé"
+            "title": "Cappuccino",
+            "price": "50.000đ",
+            "description": "Cappuccino với lớp foam sữa mịn màng, kết hợp hoàn hảo giữa espresso đậm đà và sữa tươi ngọt ngào."
           },
           {
-            "title": "Vệ sinh túi",
-            "price": "180.000đ",
-            "description": "Trạm sử dụng các phương pháp và sản phẩm chuyên nghiệp để loại bỏ bụi bẩn, vết bẩn, đồng thời vẫn bảo vệ chất liệu và màu sắc của túi xách."
+            "title": "Latte",
+            "price": "55.000đ",
+            "description": "Latte mềm mại với nhiều sữa tươi, tạo nên hương vị nhẹ nhàng và dễ uống, phù hợp cho mọi đối tượng."
           }
         ],
         "images": [
@@ -133,33 +133,28 @@
         ]
       },
       {
-        "title": "Phục hồi màu",
-        "key": "recovery-color",
+        "title": "Cà phê lạnh",
+        "key": "cold-coffee",
         "details": [
           {
-            "title": "Tẩy ố đế giày",
-            "price": "70.000đ",
-            "description": "Giày bị ố vàng vì thời tiết,... không còn là nỗi bận tâm. Trạm Giày sẽ tư vấn cung cấp dịch vụ tẩy đế ố vàng đem lại vẻ sáng mới ban đầu cho đôi giày của bạn"
-          },
-          {
-            "title": "Repaint đế giày",
-            "price": "110.000đ",
-            "description": "Sử dụng các kỹ thuật và sản phẩm chuyên nghiệp để tái tạo màu sắc, độ bền cho đế giày, giúp chúng trở lại như lúc mới mua. Bạn tự tin hơn với mỗi bước đi mỗi ngày"
-          },
-          {
-            "title": "Repaint cả giày",
+            "title": "Iced Americano",
             "price": "45.000đ",
-            "description": "Trạm cung cấp dịch vụ repaint toàn bộ đôi giày, tái tạo màu sắc và chăm chút từng chi tiết. Với sự tỉ mỉ và tinh tế, Trạm cam kết mang lại cho bạn đôi giày mới mẻ, bắt mắt và độc đáo."
+            "description": "Americano lạnh với đá viên, mang đến cảm giác mát mẻ và sảng khoái, giữ nguyên hương vị đậm đà của cà phê."
           },
           {
-            "title": "Đổi màu giày",
-            "price": "100.000đ",
-            "description": "Đổi màu đôi giày theo mong muốn của bạn, từ sắc màu tươi sáng đến cổ điển, biến đôi giày yêu thích thành một phiên bản hoàn toàn mới, mang đậm cá tính riêng của bạn"
+            "title": "Cold Brew",
+            "price": "50.000đ",
+            "description": "Cold brew được ủ lạnh trong 12 giờ, tạo nên hương vị mượt mà, ít chua và đắng, rất phù hợp cho mùa hè."
           },
           {
-            "title": "Đổi màu túi",
-            "price": "180.000đ",
-            "description": "Biến đổi túi xách thành diện mạo mới đầy cá tính và sáng tạo bằng kỹ thuật và chất liệu chuyên nghiệp, đổi màu sắc và tiết tấu theo ý thích của bạn."
+            "title": "Iced Latte",
+            "price": "60.000đ",
+            "description": "Latte lạnh với sữa tươi và đá, tạo nên sự cân bằng hoàn hảo giữa vị đắng của cà phê và vị ngọt của sữa."
+          },
+          {
+            "title": "Frappuccino",
+            "price": "65.000đ",
+            "description": "Frappuccino xay với đá, kem tươi và syrup, tạo nên thức uống mát lạnh, ngọt ngào và hấp dẫn."
           }
         ],
         "images": [
@@ -190,23 +185,23 @@
         ]
       },
       {
-        "title": "Dán keo",
-        "key": "glue",
+        "title": "Trà & Đồ uống khác",
+        "key": "tea-drinks",
         "details": [
           {
-            "title": "Dán keo mép",
-            "price": "70.000đ",
-            "description": "Keo dán chuyên dụng và kỹ thuật chuyên nghiệp sẽ tạo nên sự bền bỉ, chắc chắn cho phần thân, đế và các chi tiết của giày. Với dịch vụ này giày của bạn sẽ lại được vận động bình thường và thời gian bảo quản lâu hơn"
+            "title": "Trà xanh",
+            "price": "30.000đ",
+            "description": "Trà xanh thơm mát, giàu chất chống oxi hóa, giúp thư giãn và tốt cho sức khỏe."
           },
           {
-            "title": "Dán cả đôi",
-            "price": "110.000đ",
-            "description": "Lớp keo giày có thể khô đi sau thời gian và cần phải được tẩy sạch để thay thế bằng lớp keo mới. Đôi giày sẽ được phục hồi như mới và chắc chắn hơn khi sử dụng"
+            "title": "Trà sữa",
+            "price": "45.000đ",
+            "description": "Trà sữa đậm đà với hương vị ngọt ngào, kết hợp giữa trà và sữa tươi, có thể thêm trân châu."
           },
           {
-            "title": "Khâu đế giày",
-            "price": "200.000đ - 600.000đ",
-            "description": "Khâu đế giày đảm bảo sự chắc chắn và thẩm mỹ. Chúng tôi sử dụng kỹ thuật may chuyên nghiệp và vật liệu chuyên dụng để tái tạo đế giày, giúp chúng trở nên bền bỉ và sẵn sàng cho mọi chặng đường."
+            "title": "Chocolate nóng",
+            "price": "50.000đ",
+            "description": "Chocolate nóng đậm đà với kem tươi, mang đến cảm giác ấm áp và ngọt ngào."
           }
         ],
         "images": [
@@ -237,33 +232,28 @@
         ]
       },
       {
-        "title": "Các dịch vụ khác",
-        "key": "other",
+        "title": "Bánh & Món ăn nhẹ",
+        "key": "food",
         "details": [
           {
-            "title": "Dán sole cao su bảo vệ đế",
-            "price": "450.000đ",
-            "description": "Là cách tốt nhất để bảo vệ và kéo dài tuổi thọ cho đôi giày yêu quý của bạn. Chúng tôi sử dụng các loại sole chất lượng cao và kỹ thuật dán chuyên nghiệp để bảo vệ đế giày khỏi hao mòn, trầy xước và đổ bẩn."
+            "title": "Bánh croissant",
+            "price": "35.000đ",
+            "description": "Bánh croissant bơ thơm ngon, giòn rụm bên ngoài, mềm mại bên trong, hoàn hảo để kết hợp với cà phê."
           },
           {
-            "title": "Dán sole 3M + cao su",
-            "price": "750.000đ",
-            "description": "Cũng như dán SLOE 3M nhưng Trạm tích hợp thêm miếng lót cao su cao cấp tại các điểm chạm nhiều nhất ở dưới đế giày giúp 3M bền, sử dụng lâu hơn ít bị mòn hơn"
+            "title": "Bánh muffin",
+            "price": "40.000đ",
+            "description": "Bánh muffin với nhiều hương vị: chocolate, blueberry, vanilla, mềm xốp và ngọt ngào."
           },
           {
-            "title": "Hút ố giày vải trắng",
-            "price": "90.000đ",
-            "description": "Chúng tôi sử dụng các phương pháp và sản phẩm chuyên nghiệp để loại bỏ mọi vết bẩn và ố trên bề mặt vải, để giày trở nên sáng bóng và tươi mới."
+            "title": "Sandwich",
+            "price": "65.000đ",
+            "description": "Sandwich tươi ngon với nhiều loại nhân: gà, thịt nguội, rau củ, phù hợp cho bữa sáng hoặc bữa trưa nhẹ."
           },
           {
-            "title": "Chạy cạnh viền túi",
-            "price": "Vui lòng liên hệ",
-            "description": "Mang lại sự mới mẻ và tăng tính thẩm mỹ cho túi xách của bạn bằng kỹ thuật và vật liệu chất lượng cao. Túi xách sẽ trở nên đẹp hơn, sang trọng hơn và bền bỉ hơn"
-          },
-          {
-            "title": "Custom giày",
-            "price": "Vui lòng liên hệ",
-            "description": "Biến đôi giày thành tác phẩm nghệ thuật của riêng bạn, bắt kịp theo trend mẫu mã mới. Trạm cam kết đồng hành cùng bạn để tạo ra thiết kế độc đáo, phản ánh đúng cá tính và phong cách của bạn."
+            "title": "Salad",
+            "price": "70.000đ",
+            "description": "Salad tươi mát với rau củ quả tươi ngon, sốt đặc biệt, bổ dưỡng và healthy."
           }
         ],
         "images": [
@@ -324,30 +314,30 @@
     ]
   },
   "sectionCleaningProcess": {
-    "heading": "Quy trình vệ sinh",
-    "description": "Với dịch vụ vệ sinh giày chuyên nghiệp của chúng tôi, bạn sẽ nhận được đôi giày sạch sẽ và mới mẻ mà không cần phải lo lắng về chi tiết. Đội ngũ chuyên gia của chúng tôi sẽ loại bỏ bụi bẩn và vết bẩn một cách nhanh chóng và hiệu quả.",
+    "heading": "Quy trình pha chế",
+    "description": "Với quy trình pha chế cà phê chuyên nghiệp của chúng tôi, bạn sẽ nhận được những ly cà phê thơm ngon và chất lượng nhất. Đội ngũ barista chuyên nghiệp của chúng tôi sẽ pha chế từng ly cà phê một cách tỉ mỉ và cẩn thận.",
     "articles": [
       {
-        "title": "PHÂN LOẠI, GẮN TAG, KIỂM TRA",
-        "shortDescription": "Bộ phận kiểm tra chất lượng tình trạng , chất liệu giày Gắn tag định danh, chụp ảnh, lưu vào hệ thống lưu trữ của TrạmChọn dung dịch và dụng cụ vệ sinh phù hợp",
+        "title": "CHỌN HẠT CÀ PHÊ CHẤT LƯỢNG",
+        "shortDescription": "Bộ phận kiểm tra chất lượng hạt cà phê, chọn lọc những hạt cà phê tốt nhất. Gắn nhãn định danh, chụp ảnh, lưu vào hệ thống quản lý của Urico. Chọn phương pháp rang và pha chế phù hợp",
         "image": "static/processes/image_20.webp",
         "href": "https://www.facebook.com/"
       },
       {
-        "title": "VỆ SINH BÊN NGOÀI VÀ TRONG",
-        "shortDescription": "Dùng bàn chải lông siêu mềm, không làm ảnh hưởng đến chất liệu giày Dùng dung dịch vệ sinh chuyên dụng Jason Markk, Crep Protect",
+        "title": "RANG XAY CÀ PHÊ TƯƠI",
+        "shortDescription": "Rang hạt cà phê với nhiệt độ và thời gian phù hợp để giữ nguyên hương vị tự nhiên. Xay cà phê tươi ngay trước khi pha để đảm bảo hương vị tốt nhất",
         "image": "static/processes/image_22.webp",
         "href": "https://www.facebook.com/"
       },
       {
-        "title": "VỆ SINH ĐẾ VÀ DÂY GIÀY",
-        "shortDescription": "Bộ phận kiểm tra chất lượng tình trạng , chất liệu giày Gắn tag định danh, chụp ảnh, lưu vào hệ thống lưu trữ của TrạmChọn dung dịch và dụng cụ vệ sinh phù hợp",
+        "title": "PHA CHẾ CHUYÊN NGHIỆP",
+        "shortDescription": "Sử dụng máy pha cà phê chuyên nghiệp và kỹ thuật pha chế chuẩn quốc tế. Kiểm soát nhiệt độ nước, áp suất và thời gian pha để tạo ra ly cà phê hoàn hảo",
         "image": "static/processes/image_21.webp",
         "href": "https://www.facebook.com/"
       },
       {
-        "title": "HẤP KHỬ MÙI",
-        "shortDescription": "Bộ phận kiểm tra chất lượng tình trạng , chất liệu giày Gắn tag định danh, chụp ảnh, lưu vào hệ thống lưu trữ của TrạmChọn dung dịch và dụng cụ vệ sinh phù hợp",
+        "title": "TRANG TRÍ VÀ PHỤC VỤ",
+        "shortDescription": "Trang trí ly cà phê với latte art đẹp mắt. Phục vụ cà phê ở nhiệt độ phù hợp cùng với bánh kèm và dịch vụ chăm sóc khách hàng tận tình",
         "image": "static/processes/image_23.webp",
         "href": "https://www.facebook.com/"
       }
@@ -355,30 +345,30 @@
   },
   "sectionBlog": {
     "heading": "BLOGS",
-    "description": "Cùng chia sẽ những kiến thức hữu ích cùng với Trạm",
-    "mobileDescription": "Cùng chia sẽ những kiến thức hữu ích với Trạm",
+    "description": "Cùng chia sẻ những kiến thức hữu ích về cà phê cùng với Urico",
+    "mobileDescription": "Cùng chia sẻ những kiến thức hữu ích về cà phê với Urico",
     "seeMore": "Xem thêm",
     "seeAll": "Xem tất cả",
-    "seeAllHref": "http://blog.tramgiay.vn/",
+    "seeAllHref": "http://blog.urico.vn/",
     "articles": [
       {
         "date": "20 Jan 2022",
-        "title": "Giày real là gì cách phân biệt giày real",
-        "shortDescription": "Mua nhầm giày fake, giày kém chất lượng luôn là nỗi lo lắng của nhiều người. Trên thị trường hiện nay có rất nhiều mẫu mã và kiểu dáng giày khác nhau, do đó bạn cần cân nhắc thật kỹ để chắc chắn rằng mình đã chọn được sản phẩm chính hãng",
+        "title": "Cà phê Arabica là gì và cách phân biệt",
+        "shortDescription": "Mua nhầm cà phê kém chất lượng luôn là nỗi lo lắng của nhiều người yêu cà phê. Trên thị trường hiện nay có rất nhiều loại cà phê khác nhau, do đó bạn cần cân nhắc thật kỹ để chắc chắn rằng mình đã chọn được sản phẩm chất lượng",
         "image": "static/processes/image_20.webp",
-        "href": "http://blog.tramgiay.vn/?p=1"
+        "href": "http://blog.urico.vn/?p=1"
       },
       {
-        "title": "Vệ sinh bên ngoài và trong",
-        "shortDescription": "Dùng bàn chải lông siêu mềm, không làm ảnh hưởng đến chất liệu giày Dùng dung dịch vệ sinh chuyên dụng Jason Markk, Crep Protect",
+        "title": "Kỹ thuật pha cà phê espresso",
+        "shortDescription": "Hướng dẫn chi tiết cách pha espresso chuẩn Ý với máy pha chuyên nghiệp. Kiểm soát nhiệt độ, áp suất và thời gian để có ly espresso hoàn hảo",
         "image": "static/processes/image_22.webp",
-        "href": "http://blog.tramgiay.vn/?p=39"
+        "href": "http://blog.urico.vn/?p=39"
       },
       {
-        "title": "Vệ sinh đế và dây giày",
-        "shortDescription": "Bộ phận kiểm tra chất lượng tình trạng , chất liệu giày Gắn tag định danh, chụp ảnh, lưu vào hệ thống lưu trữ của TrạmChọn dung dịch và dụng cụ vệ sinh phù hợp",
+        "title": "Latte art cơ bản cho người mới",
+        "shortDescription": "Học cách tạo ra những hình vẽ đẹp mắt trên bề mặt cà phê. Kỹ thuật đánh sữa và rót sữa để tạo ra latte art chuyên nghiệp",
         "image": "static/processes/image_21.webp",
-        "href": "http://blog.tramgiay.vn/?p=42"
+        "href": "http://blog.urico.vn/?p=42"
       }
     ]
   },
@@ -389,16 +379,16 @@
     "time": {
       "name": "Giờ phục vụ",
       "date1": "Thứ 2 - Thứ 6",
-      "time1": "09h00 -20h00",
+      "time1": "07h00 - 22h00",
       "date2": "Thứ 7 - CN",
-      "time2": "09h30 - 20h00"
+      "time2": "07h00 - 23h00"
     },
     "delivery": {
       "name": "Dịch vụ giao hàng",
-      "note": "Giao nhận 2 chiều <b>Freeship</b> cho đơn hàng 500k+",
+      "note": "Giao hàng tận nơi <b>Freeship</b> cho đơn hàng 200k+",
       "shipping": [
         {
-          "name": "Quận Bình Thạnh",
+          "name": "Quận Phú Nhuận",
           "price": ""
         },
         {
@@ -406,7 +396,7 @@
           "price": ""
         },
         {
-          "name": "Quận Gò Vấp",
+          "name": "Quận Bình Thạnh",
           "price": ""
         },
         {
@@ -418,20 +408,20 @@
           "price": ""
         },
         {
-          "name": "Quận Hóc Môn",
+          "name": "Quận Gò Vấp",
           "price": ""
         }
       ]
     }
   },
   "sectionPolicy": {
-    "heading": "Trạm Giày cung cấp dịch vụ vệ sinh chuyên nghiệp và toàn diện:",
+    "heading": "Urico Coffee cung cấp dịch vụ cà phê chuyên nghiệp và toàn diện:",
     "rules": [
       {
-        "name": "Vệ sinh giày: Từ việc làm sạch giày tiêu chuẩn đến vệ sinh các loại chất liệu giày như da lộn, da, tây, giày cao gót, giày búp bê và nhiều hơn nữa. Trạm cũng cung cấp các dịch vụ tẩy ố, sơn lại đế giày, sơn nhuộm, và xịt nano chống thấm bảo vệ giày."
+        "name": "Cà phê chất lượng cao: Từ việc chọn lọc hạt cà phê Arabica và Robusta chất lượng cao đến pha chế các loại cà phê như espresso, americano, latte, cappuccino và nhiều hơn nữa. Urico cũng cung cấp các dịch vụ rang xay tươi, pha chế theo yêu cầu và tư vấn về cà phê."
       },
       {
-        "name": "Vệ sinh túi xách: Spa cho các dòng túi xách, ví da hiệu cao cấp như Louis Vuitton, Chanel, Gucci, Hermes và nhiều hơn nữa, với đầy đủ các dịch vụ như sơn, nhuộm, đánh xi và thay khóa"
+        "name": "Không gian và dịch vụ: Spa thư giãn cho tâm hồn với không gian ấm cúng, wifi miễn phí, khu vực làm việc riêng tư và nhiều hơn nữa, với đầy đủ các dịch vụ như đặt bàn, giao hàng tận nơi và tổ chức sự kiện"
       }
     ]
   }
