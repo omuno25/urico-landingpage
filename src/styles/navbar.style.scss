@@ -1,0 +1,20 @@
+.st-navbar-section {
+  &__navbar {
+    background-color: #4fcfd8;
+    padding-top: 0;
+
+    .navbar .navbar-nav > a {
+      font-size: var(--st-font-size-04);
+      font-weight: 600;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0;
+    }
+    .nav-link.active {
+      color: var(--st-color-base-white);
+    }
+    .icon_a {
+      display: none;
+    }
+  }
+}

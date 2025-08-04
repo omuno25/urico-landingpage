@@ -1,0 +1,27 @@
+.st-mobile-navbar-section {
+  &__navbar {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+    padding-bottom: 0.91rem;
+    padding-top: 0.92rem;
+
+    .nav-link.active {
+      color: var(--st-color-primary-500);
+    }
+    .navbar-toggler {
+      border: none;
+      color: transparent;
+    }
+
+    .navbar-nav {
+      padding-left: var(--st-spacing-02);
+      padding-right: var(--st-spacing-02);
+    }
+
+    .nav-link {
+      font-size: var(--st-font-size-03);
+      font-weight: 600;
+      padding-bottom: var(--st-spacing-04);
+      padding-top: var(--st-spacing-04);
+    }
+  }
+}

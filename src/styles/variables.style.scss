@@ -1,0 +1,41 @@
+:root {
+  /** base **/
+  --st-color-base-black: #1b1919;
+  --st-color-base-white: #fefefe;
+
+  /** gray **/
+  --st-color-gray-50: #f9fafb;
+  --st-color-gray-100: #f2f4f7;
+  --st-color-gray-200: #eaecf0;
+  --st-color-gray-300: #d0d5dd;
+  --st-color-gray-400: #98a2b3;
+  --st-color-gray-500: #667085;
+  --st-color-gray-600: #475467;
+  --st-color-gray-700: #344054;
+  --st-color-gray-800: #1d2939;
+  --st-color-gray-900: #101828;
+
+  /** primary **/
+  --st-color-primary-50: #f0fafb;
+  --st-color-primary-100: #e1f6f7;
+  --st-color-primary-200: #d2f1f3;
+  --st-color-primary-300: #b4e8ec;
+  --st-color-primary-400: #99dfe4;
+  --st-color-primary-500: #6cd2d9;
+  --st-color-primary-600: #61bdc3;
+  --st-color-primary-700: #417e82;
+  --st-color-primary-800: #2b5456;
+  --st-color-primary-900: #023e2e;
+
+  /** font-size **/
+  --st-font-size-body-1: 16px;
+  --st-font-size-body-2: 14px;
+  --st-font-size-caption: 12px;
+  --st-font-size-h1: 36px;
+  --st-font-size-h2: 30px;
+  --st-font-size-h3: 24px;
+  --st-font-size-h4: 20px;
+  --st-font-size-h5: 18px;
+  --st-font-size-subtitle-1: 16px;
+  --st-font-size-subtitle-2: 14px;
+}

@@ -1,0 +1,45 @@
+{
+  "name": "shoes-station",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy:local": "yarn build:local && pm2 start pm2.config.js --env local",
+    "deploy:dev": "yarn build:dev && pm2 start pm2.config.js --env dev",
+    "deploy:prod": "yarn build:prod && pm2 start pm2.config.js --env prod"
+  },
+  "dependencies": {
+    "@next/font": "14.2.3",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "20.12.8",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "bootstrap": "^5.3.3",
+    "eslint-config-next": "14.2.3",
+    "lodash.debounce": "^4.0.8",
+    "next": "14.2.3",
+    "next-sitemap": "^4.2.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18.2.0",
+    "react-spinners": "^0.13.8",
+    "swiper": "^11.1.1",
+    "typescript": "5.4.5",
+    "yet-another-react-lightbox": "^3.20.0"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5"
+  }
+}

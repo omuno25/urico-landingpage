@@ -1,0 +1,8 @@
+.st-footer-common {
+  background-color: var(--st-color-primary-500);
+  padding-bottom: calc(var(--st-spacing-02) + var(--st-spacing-01));
+  padding-top: calc(var(--st-spacing-02) + var(--st-spacing-01));
+  &__container a:last-child span {
+    display: none;
+  }
+}

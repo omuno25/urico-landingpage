@@ -1,0 +1,75 @@
+.st-cleaning-process-section {
+  &__container {
+    padding: var(--st-spacing-10);
+
+    &__heading {
+      color: var(--st-color-primary-500);
+    }
+
+    &__description {
+      font-size: var(--st-font-size-03);
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    &__img-hook {
+      margin-bottom: var(--st-spacing-05);
+      position: relative;
+    }
+
+    &__img {
+      border-radius: var(--st-border-radius-02);
+    }
+
+    &__card {
+      border: none;
+      border-radius: var(--st-border-radius-03);
+      box-shadow: var(--st-box-shadow-06);
+      margin: var(--st-spacing-05);
+      margin-right: 0;
+      min-height: 27.5rem;
+      padding: var(--st-spacing-05);
+    }
+
+    &__card-title {
+      font-size: calc(var(--st-font-size-03) + 1px);
+      font-weight: 600;
+    }
+
+    &__card-description {
+      color: var(--st-color-gray-500);
+      font-size: var(--st-font-size-02);
+      font-weight: 400;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    &__card-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__rounded {
+      align-items: center;
+      background-color: var(--st-color-primary-500);
+      border-radius: 100%;
+      bottom: -10%;
+      display: flex;
+      font-size: var(--st-font-size-02);
+      font-weight: 600;
+      height: 50px;
+      justify-content: center;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      width: 50px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      &__container {
+        padding: 2rem 1.125rem;
+      }
+    }
+  }
+}

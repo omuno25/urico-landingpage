@@ -1,0 +1,90 @@
+.st-mobile-blog-section {
+  &__background {
+    background-image: url('../../public/static/bg/decor_2.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &__container {
+    padding: var(--st-spacing-05);
+
+    &__heading {
+      color: var(--st-color-primary-500);
+      font-size: calc(var(--st-size-02) + 2px);
+      font-weight: 600;
+    }
+
+    &__description {
+      font-size: var(--st-font-size-02);
+      font-weight: 400;
+      line-height: 17px;
+      margin-top: var(--st-spacing-03);
+    }
+
+    &__img {
+      border-radius: calc(var(--st-border-radius-01) + 1px);
+      max-height: 100px;
+      max-width: 110px;
+    }
+
+    &__card {
+      border: none;
+      padding-bottom: var(--st-spacing-06);
+    }
+
+    &__body {
+      max-height: 100px;
+      padding: 0;
+      padding-left: var(--st-spacing-03);
+    }
+
+    &__title {
+      font-size: var(--st-font-size-02);
+      font-weight: 600;
+      min-height: 33px;
+    }
+
+    &__text {
+      color: var(--st-color-gray-500);
+      font-size: var(--st-font-size-02);
+      font-weight: 400;
+      margin-bottom: var(--st-spacing-02);
+    }
+
+    &__footer {
+      background-color: transparent;
+      border-top: none;
+      color: var(--st-color-gray-500);
+      font-size: var(--st-font-size-01);
+      font-weight: 400;
+      padding: 0;
+    }
+
+    &__see-more {
+      color: var(--st-color-primary-500);
+      margin-right: var(--st-spacing-02);
+      text-align: right;
+    }
+
+    &__button-see-all {
+      background-color: var(--st-color-primary-50);
+      border-color: var(--st-color-primary-50);
+      color: var(--st-color-primary-500);
+      display: flex;
+      font-size: var(--st-font-size-02);
+      font-weight: 600;
+      justify-content: center;
+      margin: var(--st-spacing-01);
+    }
+
+    &__button-see-all:hover {
+      background-color: var(--st-color-primary-200) !important;
+      border-color: var(--st-color-primary-50) !important;
+      color: var(--st-color-primary-500) !important;
+    }
+
+    &__ico-narrow {
+      margin-right: 4px;
+    }
+  }
+}

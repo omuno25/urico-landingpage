@@ -1,0 +1,14 @@
+.st-icon-arrow-rounded {
+  &__wrap {
+    background-color: var(--st-color-base-white);
+    border-radius: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    vertical-align: middle;
+
+    &__icon {
+      margin: auto;
+      width: 100%;
+    }
+  }
+}

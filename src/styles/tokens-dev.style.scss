@@ -1,0 +1,204 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+  /** primary **/
+  --ion-color-primary: var(--st-color-primary-100);
+  --ion-color-primary-rgb: 71, 129, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: var(--st-color-primary-300);
+  --ion-color-primary-tint: var(--st-color-primary-100);
+
+  /** secondary **/
+  --ion-color-secondary: #ffcc33;
+  --ion-color-secondary-rgb: 255, 204, 51;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #e0b42d;
+  --ion-color-secondary-tint: #ffd147;
+
+  /** tertiary **/
+  --ion-color-tertiary: #024b73;
+  --ion-color-tertiary-rgb: 2, 75, 115;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #024265;
+  --ion-color-tertiary-tint: #1b5d81;
+
+  /** success **/
+  --ion-color-success: var(--st-color-primary-100);
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: var(--st-color-primary-300);
+  --ion-color-success-tint: var(--st-color-primary-100);
+
+  /** warning **/
+  --ion-color-warning: var(--st-color-warning-300);
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: var(--st-color-warning-300);
+  --ion-color-warning-tint: var(--st-color-warning-100);
+
+  /** danger **/
+  --ion-color-danger: var(--st-color-error-100);
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: var(--st-color-error-300);
+  --ion-color-danger-tint: var(--st-color-error-100);
+
+  /** dark **/
+  --ion-color-dark: var(--st-color-gray-100);
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: var(--st-color-gray-300);
+  --ion-color-dark-tint: var(--st-color-gray-100);
+
+  /** medium **/
+  --ion-color-medium: var(--st-color-gray-200);
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: var(--st-color-gray-400);
+  --ion-color-medium-tint: var(--st-color-gray-200);
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  /** prime */
+  --ion-color-prime: #f3f3f3;
+  --ion-color-prime-rgb: 235, 245, 254;
+  --ion-color-prime-contrast: #000000;
+  --ion-color-prime-contrast-rgb: 0, 0, 0;
+  --ion-color-prime-shade: #cfd8e0;
+  --ion-color-prime-tint: #edf6fe;
+
+  /** white */
+  --ion-color-white: #ffffff;
+  --ion-color-white-rgb: 255, 255, 255;
+  --ion-color-white-contrast: #000000;
+  --ion-color-white-contrast-rgb: 0, 0, 0;
+  --ion-color-white-shade: #e0e0e0;
+  --ion-color-white-tint: #ffffff;
+
+  /** info */
+  --ion-color-info: #17a2b8;
+  --ion-color-info-rgb: 23, 162, 184;
+  --ion-color-info-contrast: #ffffff;
+  --ion-color-info-contrast-rgb: 255, 255, 255;
+  --ion-color-info-shade: #148fa2;
+  --ion-color-info-tint: #2eabbf;
+
+  /** other */
+  --lotto-card-background: white;
+  --ion-item-color: black;
+
+  --st-banner-background: #021373;
+  --st-banner-color: #ffffff;
+
+  --lobby-tab-btn-color: #ffc46e;
+  --lobby-tab-btn-color-active: #ffe76e;
+
+  --pk3-board-bg-color: #2f7455;
+  --pk3-board-header-color: #17593e;
+  --pk3-board-header-color-shade: #103e2b;
+  --pk3-board-highlight-color: #fea931;
+  --pk3-text-color: white;
+
+  // ** SIZE TOKEN
+  --st-size-01: 8px;
+  --st-size-02: 16px;
+  --st-size-03: 24px;
+  --st-size-04: 32px;
+  --st-size-05: 40px;
+  --st-size-06: 48px;
+  --st-size-07: 56px;
+  --st-size-08: 64px;
+  --st-size-09: 72px;
+  --st-size-10: 80px;
+  --st-size-11: 88px;
+  --st-size-12: 96px;
+  --st-size-13: 104px;
+  --st-size-14: 112px;
+
+  // ** BORDER RADIUS TOKEN
+  --st-border-radius-01: 4px;
+  --st-border-radius-02: 8px;
+  --st-border-radius-03: 12px;
+  --st-border-radius-04: 16px;
+  --st-border-radius-05: 20px;
+  --st-border-radius-06: 24px;
+  --st-border-radius-07: 32px;
+  --st-border-radius-08: 40px;
+  --st-border-radius-09: 48px;
+  --st-border-radius-10: 64px;
+  --st-border-radius-11: 80px;
+
+  // ** SPACING TOKEN
+  --st-spacing-01: 2px;
+  --st-spacing-02: 4px;
+  --st-spacing-03: 8px;
+  --st-spacing-04: 12px;
+  --st-spacing-05: 16px;
+  --st-spacing-06: 24px;
+  --st-spacing-07: 32px;
+  --st-spacing-08: 40px;
+  --st-spacing-09: 48px;
+  --st-spacing-10: 64px;
+  --st-spacing-11: 80px;
+  --st-spacing-12: 96px;
+  --st-spacing-13: 160px;
+
+  // default body font size
+  --st-font-size-01: 12px;
+  --st-font-size-02: 14px;
+  --st-font-size-03: 16px;
+  --st-font-size-04: 18px;
+  --st-font-size-05: 20px;
+  --st-font-size-06: 24px;
+  --st-font-size-07: 28px;
+  --st-font-size-08: 32px;
+  --st-font-size-09: 40px;
+  --st-font-size-10: 48px;
+  --st-font-size-11: 64px;
+  --st-font-size-12: 80px;
+
+  // box-shadow
+  --st-box-shadow-01: 0 1px 2px 0 rgba(0, 0, 0, 0.16); // container
+  --st-box-shadow-02: 0 4px 8px 0 rgba(0, 0, 0, 0.16); //overlay
+  --st-box-shadow-03: 0 6px 12px 0 rgba(0, 0, 0, 0.24); // header
+  --st-box-shadow-04: 0 8px 16px 0 rgba(0, 0, 0, 0.32); // navigation
+  --st-box-shadow-05: 0 12px 24px 0 rgba(0, 0, 0, 0.4); // modal
+  --st-box-shadow-06: 0 2px 8px 0 rgba(99, 99, 99, 0.2); // card
+
+  // z-index
+  --st-z-index-01: 1000; // bootstrap element
+  --st-z-index-02: 2000; // dropdown, tooltip
+  --st-z-index-03: 3000; // navigation
+  --st-z-index-04: 4000; // overlay
+  --st-z-index-05: 5000; // modal
+
+  // casino table color
+  --st-color-casino-table-tint: #2f7455;
+  --st-color-casino-table: #17593e;
+  --st-color-casino-table-shade: #103e2b;
+}
+
+.ion-color-info {
+  --ion-color-base: var(--ion-color-info);
+  --ion-color-base-rgb: var(--ion-color-info-rgb);
+  --ion-color-contrast: var(--ion-color-info-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-info-contrast-rgb);
+  --ion-color-shade: var(--ion-color-info-shade);
+  --ion-color-tint: var(--ion-color-info-tint);
+}

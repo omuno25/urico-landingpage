@@ -1,0 +1,43 @@
+.st-carousel-section {
+  &__container {
+    position: relative;
+
+    &__middle-content {
+      bottom: 7%;
+      position: absolute;
+      width: 100%;
+      z-index: 99;
+    }
+
+    &__card {
+      background-color: var(--st-color-primary-500);
+      border-radius: var(--st-border-radius-01);
+      height: 360px;
+      padding: var(--st-spacing-10);
+      text-align: center;
+    }
+
+    &__description {
+      font-size: var(--st-font-size-05);
+      line-height: 30px;
+    }
+
+    &__bg-decor {
+      background-image: url('../../public/static/bg/decor.svg');
+      height: 150px;
+      margin-top: 200px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      &__card {
+        padding: var(--st-spacing-05);
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      &__card {
+        padding: var(--st-spacing-04);
+      }
+    }
+  }
+}
