@@ -1,10 +1,15 @@
 import metadata from '../../../data/metadata.json';
+import { SectionName } from '../../utils/enum';
 import { ImageCommon } from '../common';
+
 const className = 'st-carousel-section';
 
 const CarouselSection: React.FC = () => {
   return (
-    <div className={`${className}__container`}>
+    <div
+      id={`section--${SectionName.station}`}
+      className={`${className}__container`}
+    >
       <div className={`${className}__container__logo`}>
         <ImageCommon
           src={metadata.sectionCarousel.banners[0].image}

@@ -6,18 +6,24 @@ const useStickyNavbar = () => {
   const [stickyClass, setStickyClass] = useState('');
 
   useEffect(() => {
-    const stickNavbar = () =>
-      window !== undefined
-        ? window.scrollY > TOP_HEIGHT
-          ? setStickyClass('fixed-top')
-          : setStickyClass('')
-        : null;
+    const stickNavbar = () => {
+      if (window !== undefined) {
+        if (window.scrollY > TOP_HEIGHT) {
+          setStickyClass('fixed-top sticky');
+        } else {
+          setStickyClass('');
+        }
+      }
+    };
+
+    // Call once to set initial state
+    stickNavbar();
 
     window.addEventListener('scroll', stickNavbar);
     return () => {
-      window.addEventListener('scroll', stickNavbar);
+      window.removeEventListener('scroll', stickNavbar);
     };
-  });
+  }, []);
 
   return stickyClass;
 };
