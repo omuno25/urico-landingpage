@@ -231,28 +231,107 @@
     border: 2px solid #e0e0e0;
   }
 
-  // Mobile responsiveness
-  @media (max-width: 991px) {
-    &__menu-content,
+  // Tablet responsiveness (768px - 991px)
+  @media (max-width: 991px) and (min-width: 768px) {
+    &__menu-content {
+      padding: 40px 30px;
+      min-height: 60vh;
+    }
+
     &__hero-content {
-      height: auto;
-      min-height: 50vh;
+      min-height: 60vh;
+    }
+
+    &__hero-image {
+      height: 60vh;
+    }
+
+    &__menu-title {
+      font-size: 3.5rem;
+    }
+
+    &__workshop-title {
+      font-size: 3.5rem;
+    }
+
+    &__workshop-info,
+    &__workshop-details {
+      padding: 0 30px;
+      margin-bottom: 20px;
+    }
+
+    &__workshop-image-left,
+    &__workshop-image-right {
+      height: 280px;
+      padding: 0 15px;
+      margin-bottom: 25px;
+    }
+  }
+
+  // Mobile responsiveness (< 768px)
+  @media (max-width: 767px) {
+    &__container {
+      padding-top: 80px; // Account for fixed navbar
     }
 
     &__menu-content {
-      padding: 40px 20px;
+      padding: 30px 20px;
+      min-height: auto;
+      order: 1; // Menu content first on mobile
+    }
+
+    &__hero-content {
+      min-height: 50vh;
+      order: 2; // Hero image second on mobile
     }
 
     &__hero-image {
       height: 50vh;
+      min-height: 300px;
     }
 
     &__menu-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    &__category-title {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    &__menu-category {
+      margin-bottom: 30px;
+    }
+
+    &__menu-items {
+      padding-left: 15px;
+    }
+
+    &__menu-item {
+      padding: 12px 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #f1f3f4;
+      }
+    }
+
+    &__item-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    &__item-price {
+      font-size: 0.9rem;
+      color: #2d5a3d;
+      font-weight: 700;
     }
 
     &__workshop-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     &__workshop-info,
@@ -265,49 +344,92 @@
       justify-content: flex-start;
     }
 
-    &__workshop-image-left,
-    &__workshop-image-right {
-      height: 250px;
-      padding: 0 15px;
-      margin-bottom: 20px;
-    }
+    &__workshop-date p {
+      font-size: 1rem;
 
-    &__workshop-images {
-      margin-top: 40px;
-      padding-bottom: 40px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    &__menu-title {
-      font-size: 2.5rem;
-    }
-
-    &__workshop-title {
-      font-size: 2.5rem;
-    }
-
-    &__hero-text h2 {
-      font-size: 2rem;
-    }
-
-    &__hero-logo span {
-      font-size: 1.5rem;
+      &:first-child,
+      &:last-child {
+        font-size: 0.9rem;
+      }
     }
 
     &__workshop-image-left,
     &__workshop-image-right {
       height: 200px;
       padding: 0 10px;
-    }
-
-    &__workshop-section {
-      padding: 40px 0 30px 0;
+      margin-bottom: 20px;
     }
 
     &__workshop-images {
       margin-top: 30px;
       padding-bottom: 30px;
+    }
+  }
+
+  // Extra small screens (< 576px)
+  @media (max-width: 575px) {
+    &__container {
+      padding-top: 70px;
+    }
+
+    &__menu-content {
+      padding: 20px 15px;
+    }
+
+    &__menu-title {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    &__category-title {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    &__menu-category {
+      margin-bottom: 25px;
+    }
+
+    &__menu-items {
+      padding-left: 12px;
+    }
+
+    &__item-name {
+      font-size: 0.9rem;
+    }
+
+    &__item-price {
+      font-size: 0.85rem;
+    }
+
+    &__hero-image {
+      height: 40vh;
+      min-height: 250px;
+    }
+
+    &__workshop-title {
+      font-size: 2rem;
+    }
+
+    &__workshop-info,
+    &__workshop-details {
+      padding: 0 15px;
+    }
+
+    &__workshop-section {
+      padding: 30px 0 25px 0;
+    }
+
+    &__workshop-image-left,
+    &__workshop-image-right {
+      height: 180px;
+      padding: 0 5px;
+      margin-bottom: 15px;
+    }
+
+    &__workshop-images {
+      margin-top: 25px;
+      padding-bottom: 25px;
     }
   }
 }

@@ -11,10 +11,10 @@ const MenuSection: React.FC = () => {
       id={`section--${SectionName.menu}`}
       className={`${className}__container`}
     >
-      <Container fluid className="h-100">
-        <Row className="h-100 align-items-center">
+      <Container fluid>
+        <Row className="align-items-stretch">
           {/* Left side - Menu items */}
-          <Col lg={6} md={12} className={`${className}__menu-content`}>
+          <Col lg={6} md={12} className={`${className}__menu-content order-1 order-lg-1`}>
             <div className={`${className}__menu-header`}>
               <h1 className={`${className}__menu-title`}>MENU</h1>
             </div>
@@ -67,7 +67,7 @@ const MenuSection: React.FC = () => {
           </Col>
 
           {/* Right side - Hero image */}
-          <Col lg={6} md={12} className={`${className}__hero-content`}>
+          <Col lg={6} md={12} className={`${className}__hero-content order-2 order-lg-2`}>
             <div className={`${className}__hero-image`}>
               <ImageCommon
                 src={metadata.sectionMenu.images[0].image}
@@ -100,15 +100,13 @@ const MenuSection: React.FC = () => {
 
         {/* Workshop images */}
         <Row className={`${className}__workshop-images`}>
-          <Col md={6}>
+          <Col lg={6} md={6} sm={12} className="mb-3 mb-md-0">
             <div className={`${className}__workshop-image-left`}>
-             
               <div className={`${className}__ceramic-image`}></div>
             </div>
           </Col>
-          <Col md={6}>
+          <Col lg={6} md={6} sm={12}>
             <div className={`${className}__workshop-image-right`}>
-              
               <div className={`${className}__activity-image`}></div>
             </div>
           </Col>

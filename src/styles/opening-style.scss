@@ -1,9 +1,189 @@
 .st-opening-section {
   &__container {
-    padding: var(--st-spacing-09) 0;
+    padding: var(--st-spacing-09) var(--st-spacing-04);
+    max-width: 1400px;
+    margin: 0 auto;
+
+    // Prevent horizontal overflow
+    @media (max-width: 1440px) {
+      margin: 0 20px;
+    }
   }
 
   &__container__opening-image {
+    /* Use a CSS variable to drive equal heights across columns */
+    --opening-height: 900px;
     display: flex;
+    gap: 20px;
+    align-items: stretch;
+    height: var(--opening-height);
+    overflow: visible; /* ensure images never get clipped */
+
+    /* entrance animation */
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 420ms ease, transform 420ms ease;
+
+    &.is-visible { opacity: 1; transform: translateY(0); }
+    &.is-hidden { opacity: 0; transform: translateY(16px); }
+  }
+
+  // Featured column (left side) - equal height with container
+  &__featured-column {
+    flex: 1;
+    height: 100%; // sync with __container__opening-image
+    border-radius: 12px;
+    overflow: hidden; // hide overflow so subtle hover scale doesn't bleed
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  // Secondary column (right side) - equal height with container
+  &__secondary-column {
+    flex: 1;
+    height: 100%; // sync with __container__opening-image
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+
+  &__secondary-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+    &.primary {
+      /* Keep 45% of the secondary column height minus half gap */
+      height: calc(45% - 7.5px);
+    }
+
+    &.secondary {
+      /* Keep 55% of the secondary column height minus half gap */
+      height: calc(55% - 7.5px);
+    }
+  }
+
+  // Image styling - Optimized for visibility and scaling
+  // Shared hover/focus/transition styles for images
+  &__image-main,
+  &__image-secondary {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* always fully visible */
+    object-position: center;
+    display: block;
+    will-change: transform, opacity;
+    transition: transform 220ms ease, opacity 220ms ease, filter 220ms ease;
+  }
+
+  // Subtle hover interaction
+  &__featured-column:hover .st-opening-section__image-main,
+  &__secondary-column .st-opening-section__secondary-image:hover .st-opening-section__image-secondary,
+  &__secondary-column:hover .st-opening-section__image-secondary {
+    transform: scale(1.02);
+    filter: brightness(1.02);
+  }
+
+  // Tablet responsiveness (768px - 991px)
+  @media (max-width: 991px) and (min-width: 768px) {
+    &__container {
+      padding: var(--st-spacing-07) var(--st-spacing-03);
+      margin: 0 15px;
+    }
+
+    &__container__opening-image {
+      --opening-height: 700px;
+      height: var(--opening-height);
+      gap: 15px;
+    }
+
+    &__featured-column,
+    &__secondary-column {
+      height: 100%;
+    }
+  }
+
+  // Mobile responsiveness (< 768px)
+  @media (max-width: 767px) {
+    &__container {
+      padding: var(--st-spacing-06) var(--st-spacing-03);
+      margin: 0 10px;
+    }
+
+    &__container__opening-image {
+      flex-direction: column;
+      --opening-height: auto; /* auto height in stacked layout */
+      height: auto;
+      gap: 20px;
+      overflow: visible;
+    }
+
+    &__featured-column,
+    &__secondary-column {
+      height: auto;
+      width: 100%;
+    }
+
+    &__featured-column { order: 1; }
+    &__secondary-column { order: 2; gap: 15px; }
+
+    &__secondary-image {
+      &.primary { height: 180px; }
+      &.secondary { height: 220px; }
+    }
+  }
+
+  // Extra small screens (< 576px)
+  @media (max-width: 575px) {
+    &__container {
+      padding: var(--st-spacing-05) var(--st-spacing-02);
+      margin: 0 5px;
+    }
+
+    &__container__opening-image {
+      gap: 15px;
+    }
+
+    &__featured-column,
+    &__secondary-column {
+      height: auto;
+    }
+
+    &__secondary-image {
+      &.primary { height: 160px; }
+      &.secondary { height: 200px; }
+    }
+  }
+
+  // Large desktop optimization (> 1200px)
+  @media (min-width: 1200px) {
+    &__container {
+      padding: var(--st-spacing-09) var(--st-spacing-06);
+    }
+
+    &__container__opening-image {
+      gap: 25px;
+      // Heights are handled by progressive scaling system above
+    }
+  }
+
+  // Ultra-wide screens (> 1600px)
+  @media (min-width: 1600px) {
+    &__container {
+      max-width: 1600px; // Prevent excessive width
+    }
+
+    &__container__opening-image {
+      gap: 30px;
+    }
+
+    // Ensure images don't become too large on ultra-wide screens
+    &__image-main {
+      max-height: 80vh;
+    }
+
+    &__image-secondary {
+      max-height: 40vh;
+    }
   }
 }

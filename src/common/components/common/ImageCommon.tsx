@@ -30,6 +30,7 @@ const ImageCommon: React.FC<ImageCommonProps> = (props: ImageCommonProps) => {
           height: 'auto',
           ...(props.style ? props.style : {}),
         }}
+  
         width={props.width || 500}
         height={props.height || 300}
         sizes={props.sizes || '100vw'}

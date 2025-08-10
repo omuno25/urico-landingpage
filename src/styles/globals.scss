@@ -89,6 +89,29 @@ body {
   scroll-behavior: smooth !important;
 }
 
+// Global responsive improvements
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Ensure Bootstrap containers work properly on mobile
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 575px) {
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 body {
   color: rbg(--foreground-rgb);
   font-family: var(--font-inter);
