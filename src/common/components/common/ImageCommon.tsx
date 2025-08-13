@@ -18,6 +18,9 @@ type ImageCommonProps = {
 };
 
 const ImageCommon: React.FC<ImageCommonProps> = (props: ImageCommonProps) => {
+  // Check if this is an opening section image that needs object-fit: cover
+  const isOpeningImage = props.className?.includes('st-opening-section__image');
+
   return (
     <div
       className={`w-100 h-auto position-relative flex-shrink-0 ${props.className || ''}`}
@@ -27,7 +30,8 @@ const ImageCommon: React.FC<ImageCommonProps> = (props: ImageCommonProps) => {
         alt={props.alt || metadata.default.altImage}
         style={{
           width: '100%',
-          height: 'auto',
+          height: isOpeningImage ? '100%' : 'auto',
+          objectFit: isOpeningImage ? 'cover' : 'contain',
           ...(props.style ? props.style : {}),
         }}
         width={props.width || 500}

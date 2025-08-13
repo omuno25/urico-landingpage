@@ -1,9 +1,55 @@
 .st-opening-section {
   &__container {
-    padding: var(--st-spacing-09) 0;
+    padding: var(--st-spacing-09) var(--st-spacing-04);
+
+    &__opening-image-left,
+    &__opening-image-right-1,
+    &__opening-image-right-2 {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    &__opening-image-right {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &__opening-image-right-1,
+    &__opening-image-right-2 {
+      flex: 1;
+    }
   }
 
-  &__container__opening-image {
-    display: flex;
+  // Subtle hover interaction
+  &__container__opening-image-left:hover &__container__opening-image-left-img,
+  &__container__opening-image-right-1:hover img,
+  &__container__opening-image-right-2:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.02);
+  }
+
+  // Image styling - Make images fill their containers
+  &__container__opening-image-left-img,
+  &__container__opening-image-right-1 img,
+  &__container__opening-image-right-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform, opacity;
+    transition:
+      transform 220ms ease,
+      opacity 220ms ease,
+      filter 220ms ease;
+  }
+
+  // Subtle hover interaction
+  &__container__opening-image-left:hover &__container__opening-image-left-img,
+  &__container__opening-image-right-1:hover img,
+  &__container__opening-image-right-2:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.02);
   }
 }

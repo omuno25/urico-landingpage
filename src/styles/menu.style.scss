@@ -1,11 +1,435 @@
 .st-menu-section {
   &__container {
-    padding: var(--st-spacing-09) 0;
+    background-color: #f8f9fa;
+    padding: 0;
+    position: relative;
   }
 
-  &__container__menu-image {
+  // Menu content (left side)
+  &__menu-content {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__menu-header {
+    margin-bottom: 40px;
+  }
+
+  &__menu-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #2d5a3d;
+    letter-spacing: -2px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__menu-category {
+    margin-bottom: 40px;
+  }
+
+  &__category-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d5a3d;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__menu-items {
+    border-left: 2px solid #e9ecef;
+    padding-left: 20px;
+  }
+
+  &__menu-item {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f3f4;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item-name {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  &__item-price {
+    font-size: 1rem;
+    color: #2d5a3d;
+    font-weight: 600;
+  }
+
+  // Hero content (right side)
+  &__hero-content {
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__hero-image {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__hero-text {
+    text-align: center;
+    color: white;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin: 0;
+      line-height: 0.9;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__hero-logo {
+    margin-top: 30px;
+
+    span {
+      font-size: 2rem;
+      font-weight: 300;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-style: italic;
+    }
+  }
+
+  // Workshop section
+  &__workshop-section {
+    background-color: #e8f5e8;
+    padding: 60px 0 40px 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__workshop-info {
+    padding: 0 40px;
+  }
+
+  &__workshop-label {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__workshop-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #2d5a3d;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__workshop-details {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__workshop-date {
+    text-align: right;
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #4a90a4;
+      font-weight: 600;
+
+      &:first-child {
+        font-size: 1rem;
+        color: #6c757d;
+      }
+
+      &:last-child {
+        font-size: 1rem;
+        color: #6c757d;
+      }
+    }
+  }
+
+  // Workshop images
+  &__workshop-images {
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__workshop-image-left,
+  &__workshop-image-right {
+    height: 400px;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  &__ceramic-image,
+  &__activity-image {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__ceramic-image {
+    background-image: url('/assets/images/menu/agv_28.png');
+    border: 2px solid #e0e0e0;
+  }
+
+  &__activity-image {
+    background-image: url('/assets/images/menu/agv_17.png');
+    border: 2px solid #e0e0e0;
+  }
+
+  // Tablet responsiveness (768px - 991px)
+  @media (max-width: 991px) and (min-width: 768px) {
+    &__menu-content {
+      padding: 40px 30px;
+      min-height: 60vh;
+    }
+
+    &__hero-content {
+      min-height: 60vh;
+    }
+
+    &__hero-image {
+      height: 60vh;
+    }
+
+    &__menu-title {
+      font-size: 3.5rem;
+    }
+
+    &__workshop-title {
+      font-size: 3.5rem;
+    }
+
+    &__workshop-info,
+    &__workshop-details {
+      padding: 0 30px;
+      margin-bottom: 20px;
+    }
+
+    &__workshop-image-left,
+    &__workshop-image-right {
+      height: 280px;
+      padding: 0 15px;
+      margin-bottom: 25px;
+    }
+  }
+
+  // Mobile responsiveness (< 768px)
+  @media (max-width: 767px) {
+    &__container {
+      padding-top: 80px; // Account for fixed navbar
+    }
+
+    &__menu-content {
+      padding: 30px 20px;
+      min-height: auto;
+      order: 1; // Menu content first on mobile
+    }
+
+    &__hero-content {
+      min-height: 50vh;
+      order: 2; // Hero image second on mobile
+    }
+
+    &__hero-image {
+      height: 50vh;
+      min-height: 300px;
+    }
+
+    &__menu-title {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    &__category-title {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    &__menu-category {
+      margin-bottom: 30px;
+    }
+
+    &__menu-items {
+      padding-left: 15px;
+    }
+
+    &__menu-item {
+      padding: 12px 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #f1f3f4;
+      }
+    }
+
+    &__item-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    &__item-price {
+      font-size: 0.9rem;
+      color: #2d5a3d;
+      font-weight: 700;
+    }
+
+    &__workshop-title {
+      font-size: 2.5rem;
+    }
+
+    &__workshop-info,
+    &__workshop-details {
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+
+    &__workshop-details {
+      justify-content: flex-start;
+    }
+
+    &__workshop-date p {
+      font-size: 1rem;
+
+      &:first-child,
+      &:last-child {
+        font-size: 0.9rem;
+      }
+    }
+
+    &__workshop-image-left,
+    &__workshop-image-right {
+      height: 200px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+
+    &__workshop-images {
+      margin-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  // Extra small screens (< 576px)
+  @media (max-width: 575px) {
+    &__container {
+      padding-top: 70px;
+    }
+
+    &__menu-content {
+      padding: 20px 15px;
+    }
+
+    &__menu-title {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    &__category-title {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    &__menu-category {
+      margin-bottom: 25px;
+    }
+
+    &__menu-items {
+      padding-left: 12px;
+    }
+
+    &__item-name {
+      font-size: 0.9rem;
+    }
+
+    &__item-price {
+      font-size: 0.85rem;
+    }
+
+    &__hero-image {
+      height: 40vh;
+      min-height: 250px;
+    }
+
+    &__workshop-title {
+      font-size: 2rem;
+    }
+
+    &__workshop-info,
+    &__workshop-details {
+      padding: 0 15px;
+    }
+
+    &__workshop-section {
+      padding: 30px 0 25px 0;
+    }
+
+    &__workshop-image-left,
+    &__workshop-image-right {
+      height: 180px;
+      padding: 0 5px;
+      margin-bottom: 15px;
+    }
+
+    &__workshop-images {
+      margin-top: 25px;
+      padding-bottom: 25px;
+    }
   }
 }

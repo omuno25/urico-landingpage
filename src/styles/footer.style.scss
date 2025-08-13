@@ -2,6 +2,19 @@
   background-color: var(--st-color-primary-900);
   padding-bottom: calc(var(--st-spacing-02) + var(--st-spacing-01));
   padding-top: calc(var(--st-spacing-02) + var(--st-spacing-01));
+
+  // make SVG icons visible on dark background
+  &__icon {
+    filter: brightness(0) invert(1); // turn dark svg to white-like
+    opacity: 0.95;
+    transition: opacity 200ms ease, transform 200ms ease, filter 200ms ease;
+  }
+  a:hover &__icon,
+  a:focus-visible &__icon {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+
   &__container a:last-child span {
     display: none;
   }

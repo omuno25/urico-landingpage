@@ -1,19 +1,94 @@
 .st-navbar-section {
   &__navbar {
     background-color: var(--st-color-primary-900);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
 
     .navbar .navbar-nav > a {
       color: var(--st-color-base-white);
       font-size: var(--st-font-size-04);
       font-weight: 600;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding: 0.75rem 1.5rem;
+      margin: 0 0.25rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
     }
+
     .nav-link.active {
       color: var(--st-color-base-white);
+      background-color: rgba(255, 255, 255, 0.2);
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: var(--st-color-base-white);
+        border-radius: 50%;
+      }
     }
+
     .icon_a {
       display: none;
+    }
+  }
+
+  // Sticky navbar effect
+  &__navbar.sticky {
+    background-color: rgba(45, 90, 61, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  // Mobile responsiveness
+  @media (max-width: 991px) {
+    &__navbar {
+      padding: 0.5rem 0;
+
+      .navbar .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .navbar .navbar-nav > a {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        margin: 0 0.1rem;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__navbar {
+      padding: 0.5rem 0;
+
+      .navbar .navbar-nav > a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+        margin: 0;
+      }
+
+      .nav-link.active::before {
+        width: 4px;
+        height: 4px;
+        bottom: -3px;
+      }
     }
   }
 }
