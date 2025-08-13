@@ -15,8 +15,17 @@ const FooterCommon: React.FC = () => {
     <footer className={className}>
       <Container className={`text-center py-2 py-sm-4 ${className}__container`}>
         {metadata.socials.map((item, i) => (
-          <Link href={item.href} key={i} target="_blank" aria-label={item.iconId}>
-            <SvgIcon className={`${className}__icon`} id={item.iconId} size={sizeIconSocial} />
+          <Link
+            href={item.href}
+            key={i}
+            target="_blank"
+            aria-label={item.iconId}
+          >
+            <SvgIcon
+              className={`${className}__icon`}
+              id={item.iconId}
+              size={sizeIconSocial}
+            />
             <span className="mx-3">|</span>
           </Link>
         ))}

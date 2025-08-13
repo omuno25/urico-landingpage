@@ -1,11 +1,11 @@
+import { Col, Row } from 'react-bootstrap';
+
 import metadata from '../../../data/metadata.json';
 import { ImageCommon } from '../common';
-import { Col, Row } from 'react-bootstrap';
 
 const className = 'st-opening-section';
 
 const OpeningSection: React.FC = () => {
-  // Dynamic image loading from metadata
   const openingImages = metadata.sectionOpening.images;
 
   return (

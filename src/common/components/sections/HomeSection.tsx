@@ -66,7 +66,6 @@ const HomeSection: React.FC = () => {
               src={metadata.sectionOpening.images[1].image}
               alt={metadata.sectionOpening.images[1].alt}
             />
-          
           </div>
           <div className="w-50">
             <ImageCommon
