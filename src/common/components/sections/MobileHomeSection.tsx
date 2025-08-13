@@ -12,7 +12,7 @@ const MobileHomeSection: React.FC = () => {
   const nextIcon = () => (
     <IconArrowRounded id="icon-arrow-right2" size="10.8" />
   );
-  
+
   return (
     <div
       id={`section--${SectionName.station}`}
@@ -63,6 +63,7 @@ const MobileHomeSection: React.FC = () => {
               src={metadata.sectionOpening.images[1].image}
               alt={metadata.sectionOpening.images[1].alt}
             />
+            123123
           </div>
           <div className="w-50">
             <ImageCommon

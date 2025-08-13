@@ -1,65 +1,41 @@
-import { useEffect, useRef, useState } from 'react';
 import metadata from '../../../data/metadata.json';
 import { ImageCommon } from '../common';
+import { Col, Row } from 'react-bootstrap';
+
 const className = 'st-opening-section';
 
 const OpeningSection: React.FC = () => {
   // Dynamic image loading from metadata
   const openingImages = metadata.sectionOpening.images;
 
-  // Entrance animation: reveal when in viewport
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className={`${className}__container`}>
-      <div
-        ref={containerRef}
-        className={`${className}__container__opening-image ${isVisible ? 'is-visible' : 'is-hidden'}`}
-      >
-        {/* Left column: Featured image */}
-        <div className={`${className}__featured-column`}>
-          <ImageCommon
-            src={openingImages[0]?.image}
-            alt={openingImages[0]?.alt || 'Featured image'}
-            className={`${className}__image-main`}
-          />
-        </div>
-
-        {/* Right column: Secondary images */}
-        <div className={`${className}__secondary-column`}>
-          {openingImages.slice(1).map((imageData, index) => (
-            <div
-              key={index}
-              className={`${className}__secondary-image ${index === 0 ? 'primary' : 'secondary'}`}
-            >
+      <Row className={`${className}__container__opening-image p-2 g-3`}>
+        <Col sm={12} md={7}>
+          <div className={`${className}__container__opening-image-left`}>
+            <ImageCommon
+              src={openingImages[0]?.image}
+              alt={openingImages[0]?.alt || 'Featured image'}
+            />
+          </div>
+        </Col>
+        <Col sm={12} md={5}>
+          <div className={`${className}__container__opening-image-right`}>
+            <div className={`${className}__container__opening-image-right-1`}>
               <ImageCommon
-                src={imageData.image}
-                alt={imageData.alt || `Secondary image ${index + 1}`}
-                className={`${className}__image-secondary`}
+                src={openingImages[1]?.image}
+                alt={openingImages[1]?.alt || `Secondary image 1`}
               />
             </div>
-          ))}
-        </div>
-      </div>
+            <div className={`${className}__container__opening-image-right-2`}>
+              <ImageCommon
+                src={openingImages[2]?.image}
+                alt={openingImages[2]?.alt || `Secondary image 2`}
+              />
+            </div>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };
