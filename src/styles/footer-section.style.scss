@@ -1,0 +1,350 @@
+.st-footer-section {
+  width: 100%;
+  background-color: #2d5a3d; // dark green matching the reference image
+  color: white;
+  // Fluid padding that scales with viewport
+  padding: clamp(30px, 8vw, 80px) clamp(15px, 4vw, 40px) clamp(20px, 6vw, 50px);
+  position: relative;
+
+  // Smooth scaling for the entire section
+  font-size: clamp(14px, 1.2vw, 18px);
+
+  // Enable container queries for responsive behavior
+  container-type: inline-size;
+
+  &__container {
+    max-width: clamp(320px, 90vw, 1400px);
+    margin: 0 auto;
+    // Fluid horizontal padding
+    padding: 0 clamp(15px, 3vw, 30px);
+
+    // Container-aware layout adjustments
+    @container (max-width: 768px) {
+      padding: 0 clamp(10px, 2vw, 20px);
+    }
+  }
+
+  &__content {
+    margin-bottom: clamp(20px, 5vw, 60px);
+    // Adaptive gap that considers container constraints
+    gap: clamp(15px, 3vw, 30px); // Increased gap for better spacing with larger logo
+    display: flex;
+    flex-wrap: wrap; // Allow wrapping when space is tight
+    align-items: flex-start;
+    justify-content: flex-start; // Left align columns for wider appearance
+    text-align: left; // Left align text content by default
+
+    // Container-aware layout switching
+    @container (max-width: 768px) {
+      flex-direction: column;
+      gap: clamp(20px, 5vw, 35px); // Increased mobile gap
+    }
+
+    @container (min-width: 769px) {
+      flex-direction: row;
+      justify-content: space-between; // Distribute space evenly on desktop
+    }
+
+    // Center only on very small mobile screens
+    @media (max-width: 575px) {
+      align-items: center; // Center items on very small screens
+      text-align: center; // Center text on very small screens
+    }
+  }
+
+  // Logo Column Styling - Adaptive scaling with centering
+  &__logo-column {
+    margin-bottom: clamp(15px, 4vw, 40px);
+    // Increased width allocation for larger logo
+    flex: 1 1 clamp(180px, 25vw, 350px); // Increased flex basis for larger logo
+    min-width: 150px; // Increased minimum width
+    max-width: 400px; // Increased maximum width
+    text-align: center; // Center column content by default
+
+    // Responsive alignment
+    @media (min-width: 768px) {
+      text-align: left; // Left align on larger screens
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center logo by default
+    width: 100%;
+    text-align: center; // Ensure text content is also centered
+
+    // Responsive alignment
+    @media (min-width: 768px) {
+      align-items: flex-start; // Left align on larger screens
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    margin-bottom: clamp(8px, 2vw, 20px);
+    filter: brightness(0) invert(1); // make logo white
+    transition: transform 300ms ease, opacity 300ms ease;
+
+    // Increased logo sizing for better visual prominence
+    height: clamp(80px, 12vw, 140px); // Increased from previous smaller size
+    width: auto; // auto width to maintain aspect ratio
+    max-width: min(100%, 35vw); // Increased max-width for larger logo
+    object-fit: contain; // ensure logo fits properly
+
+    // Smooth scaling animation
+    transform-origin: center center; // Center origin for better scaling
+
+    // Container-query aware hover scaling
+    &:hover {
+      transform: scale(clamp(1.03, 1.05, 1.08)); // Slightly more prominent hover scale
+      opacity: 0.9;
+    }
+
+    // Adaptive sizing based on container width
+    @container (max-width: 600px) {
+      height: clamp(60px, 10vw, 100px); // Increased mobile size
+      max-width: 30vw;
+    }
+
+    @container (max-width: 400px) {
+      height: clamp(50px, 8vw, 80px); // Increased small mobile size
+      max-width: 25vw;
+    }
+  }
+
+  &__tagline {
+    font-size: clamp(0.7rem, 1.8vw, 1.1rem);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: clamp(0.5px, 0.15vw, 1.5px);
+    line-height: clamp(1.2, 1.4, 1.6);
+    max-width: clamp(150px, 25vw, 280px);
+  }
+
+  // Links Columns Styling - Left aligned for wider interface
+  &__links-column {
+    margin-bottom: clamp(15px, 4vw, 40px);
+    // Flexible width that adapts to available space
+    flex: 1 1 clamp(100px, 15vw, 180px); // Allow more flexibility
+    min-width: 90px; // Minimum for readability
+    text-align: left; // Left alignment for wider appearance
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Left align column content
+
+    // Center only on very small mobile screens
+    @media (max-width: 575px) {
+      text-align: center; // Center only on very small screens
+      align-items: center; // Center items on very small screens
+    }
+  }
+
+  &__column-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Left align content for wider appearance
+    // Fluid spacing
+    gap: clamp(8px, 1.5vw, 15px);
+
+    // Center only on very small mobile screens
+    @media (max-width: 575px) {
+      align-items: center; // Center only on very small screens
+    }
+  }
+
+  &__column-title {
+    // Fluid typography scaling
+    font-size: clamp(0.85rem, 2.2vw, 1.3rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: clamp(10px, 3vw, 25px);
+    text-transform: uppercase;
+    letter-spacing: clamp(0.3px, 0.08vw, 0.8px);
+    text-align: center; // default center
+    width: 100%;
+    display: block;
+    // Smooth line height scaling
+    line-height: clamp(1.1, 1.3, 1.5);
+
+    // Smooth transition to left alignment on larger screens
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  &__links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__link-item {
+    margin-bottom: clamp(6px, 1.5vw, 15px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    // Fluid font sizing
+    font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+    font-weight: 500;
+    transition: all 300ms ease;
+    display: inline-block;
+    position: relative;
+    // Fluid line height
+    line-height: clamp(1.3, 1.5, 1.7);
+
+    &:hover {
+      color: white;
+      // Fluid transform distance
+      transform: translateX(clamp(3px, 0.8vw, 8px));
+
+      &::before {
+        content: '→';
+        position: absolute;
+        left: clamp(-12px, -2vw, -18px);
+        opacity: 1;
+        transform: translateX(0);
+        // Fluid arrow size
+        font-size: clamp(0.7rem, 1.5vw, 1rem);
+      }
+    }
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: clamp(-12px, -2vw, -18px);
+      opacity: 0;
+      transform: translateX(clamp(-8px, -1.5vw, -12px));
+      transition: all 300ms ease;
+      font-size: clamp(0.7rem, 1.5vw, 1rem);
+    }
+  }
+
+  // Contact Column Styling - Left aligned for wider interface
+  &__contact-column {
+    margin-bottom: clamp(15px, 4vw, 40px);
+    // Flexible width that adapts to available space (same as links column)
+    flex: 1 1 clamp(100px, 15vw, 180px); // Match links column flex properties
+    min-width: 90px; // Match links column minimum width
+    text-align: left; // Left alignment for wider appearance
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Left align column content
+
+    // Center only on very small mobile screens
+    @media (max-width: 575px) {
+      text-align: center; // Center only on very small screens
+      align-items: center; // Center items on very small screens
+    }
+  }
+
+  &__contact-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Left align content for wider appearance
+    // Fluid internal spacing (same pattern as links column)
+    gap: clamp(8px, 1.5vw, 15px);
+
+    // Center only on very small mobile screens
+    @media (max-width: 575px) {
+      align-items: center; // Center only on very small screens
+    }
+  }
+
+  &__contact-info {
+    list-style: none; // Match links list styling
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // Consistent gap with links column
+    gap: clamp(8px, 1.5vw, 15px);
+  }
+
+  &__contact-item {
+    margin-bottom: clamp(6px, 1.5vw, 15px); // Match link item spacing
+    display: block; // Match link item display
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0; // Match link item last-child behavior
+    }
+  }
+
+  &__contact-link {
+    color: rgba(255, 255, 255, 0.8); // Match link color
+    text-decoration: none;
+    // Fluid font sizing (match link sizing)
+    font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+    font-weight: 500; // Match link weight
+    transition: all 300ms ease;
+    display: inline-block; // Match link display
+    position: relative; // Match link positioning
+    // Fluid line height (match link line height)
+    line-height: clamp(1.3, 1.5, 1.7);
+
+    &:hover {
+      color: white; // Match link hover color
+      // Fluid transform distance (match link hover behavior)
+      transform: translateX(clamp(3px, 0.8vw, 8px));
+
+      &::before {
+        content: '→';
+        position: absolute;
+        left: clamp(-12px, -2vw, -18px);
+        opacity: 1;
+        transform: translateX(0);
+        // Fluid arrow size
+        font-size: clamp(0.7rem, 1.5vw, 1rem);
+      }
+    }
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: clamp(-12px, -2vw, -18px);
+      opacity: 0;
+      transform: translateX(clamp(-8px, -1.5vw, -12px));
+      transition: all 300ms ease;
+      font-size: clamp(0.7rem, 1.5vw, 1rem);
+    }
+  }
+
+  // Remove contact-text styling since we're now using contact-link for all contact items
+
+  // Remove all discrete breakpoint media queries and replace with fluid scaling
+  // The component now uses continuous scaling with clamp() and viewport units
+
+  // Ensure smooth scaling across all viewport sizes
+  * {
+    box-sizing: border-box;
+  }
+
+  // Fluid container queries for modern browsers
+  @supports (container-type: inline-size) {
+    container-type: inline-size;
+
+    @container (min-width: 768px) {
+      &__content {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  // All remaining media queries removed - using fluid scaling only
+  // The component now uses continuous scaling with clamp() and viewport units
+}

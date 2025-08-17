@@ -31,6 +31,7 @@ import '../styles/menu.style.scss';
 import '../styles/opening-style.scss';
 import '../styles/category-strip.style.scss';
 import '../styles/countdown-section.style.scss';
+import '../styles/footer-section.style.scss';
 
 
 const inter = Inter({
