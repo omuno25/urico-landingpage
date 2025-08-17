@@ -30,6 +30,31 @@
       "href": "https://www.youtube.com/@uricocoffee"
     }
   ],
+    "sectionCategories": [
+    {
+      "title": "Coffee",
+      "image": "static/icons/coffee.png",
+      "href": "#coffee"
+
+    },
+    {
+      "title": "Cold coffee",
+      "image": "static/icons/cacao.png",
+      "href": "#coldcoffee"
+
+    },
+    {
+      "title": "Cup coffee",
+        "image": "static/icons/cup-coffee.png",
+        "href": "#cupcoffee"
+    },
+    {
+      "title": "Cake",
+        "image": "static/icons/cake.png",
+        "href": "#cake"
+
+    }
+  ],
   "sectionHeader": {
     "image": "static/icons/icon.svg",
     "altImage": "Image"

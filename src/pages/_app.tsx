@@ -29,6 +29,9 @@ import '../styles/swiper-grid-image.style.scss';
 import '../styles/icon-arrow-rounded.scss';
 import '../styles/menu.style.scss';
 import '../styles/opening-style.scss';
+import '../styles/category-strip.style.scss';
+import '../styles/countdown-section.style.scss';
+
 
 const inter = Inter({
   subsets: ['latin'],

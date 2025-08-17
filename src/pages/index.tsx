@@ -6,6 +6,11 @@ import { CarouselSection } from '../common/components/sections';
 import MenuSection from '../common/components/sections/MenuSection';
 import NavBarSection from '../common/components/sections/NavBarSection';
 import OpeningSection from '../common/components/sections/OpeningSection';
+import CategoryStripSection from '../common/components/sections/CategoryStripSection';
+import CountdownSection from '../common/components/sections/CountdownSection';
+import ServiceSection from '../common/components/sections/ServiceSection';
+import PolicySection from '../common/components/sections/PolicySection';
+import InformationBottomSection from '../common/components/sections/InformationBottomSection';
 import { useCheckMobileScreen } from '../common/hooks';
 import metadataJson from '../data/metadata.json';
 export const getStaticProps: GetStaticProps = async () => {
@@ -26,8 +31,11 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
         <main>
           <NavBarSection />
           <CarouselSection />
+          <CategoryStripSection />
+          <CountdownSection />
           <OpeningSection />
           <MenuSection />
+          <InformationBottomSection/>
           <FooterCommon />
         </main>
       ) : (
@@ -35,8 +43,11 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
           {/* <HeaderCommon /> */}
           <NavBarSection />
           <CarouselSection />
+          <CategoryStripSection />
+          <CountdownSection />
           <OpeningSection />
           <MenuSection />
+          <InformationBottomSection/>
           <FooterCommon />
         </main>
       )}
