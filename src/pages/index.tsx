@@ -8,7 +8,7 @@ import CategoryStripSection from '../common/components/sections/CategoryStripSec
 
 import { useCheckMobileScreen } from '../common/hooks';
 import metadataJson from '../data/metadata.json';
-// import AboutSection from '../common/components/sections/AboutSection';
+import AboutSection from '../common/components/sections/AboutSection';
 import { FooterCommon } from '../common/components/common';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -40,7 +40,7 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
           <NavBarSection />
           <CarouselSection />
           {/* <CategoryStripSection /> */}
-          {/* <AboutSection /> */}
+          <AboutSection />
           <OpeningSection />
           <MenuSection />
           <FooterCommon />

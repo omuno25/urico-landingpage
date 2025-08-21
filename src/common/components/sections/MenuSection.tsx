@@ -29,32 +29,48 @@ const MenuSection: React.FC = () => {
               <h3 className={`${className}__category-title`}>CÀ PHÊ</h3>
               <div className={`${className}__menu-items`}>
                 <div className={`${className}__menu-item`}>
-                  <span className={`${className}__item-name`}>
-                    Latte Đặc Xíu
-                  </span>
-                  <span className={`${className}__item-price`}>49.000</span>
+                  <span className={`${className}__item-name`}>Cà phê đen</span>
+                  <span className={`${className}__item-price`}>39.000</span>
                 </div>
                 <div className={`${className}__menu-item`}>
-                  <span className={`${className}__item-name`}>
-                    Cappuccino (Nóng/Đá)
-                  </span>
-                  <span className={`${className}__item-price`}>55.000</span>
+                  <span className={`${className}__item-name`}>Cà phê sữa</span>
+                  <span className={`${className}__item-price`}>39.000</span>
                 </div>
                 <div className={`${className}__menu-item`}>
-                  <span className={`${className}__item-name`}>
-                    Espresso (Nóng/Đá)
-                  </span>
+                  <span className={`${className}__item-name`}>Bạc xỉu</span>
+                  <span className={`${className}__item-price`}>39.000</span>
+                </div>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>Expresso</span>
                   <span className={`${className}__item-price`}>45.000</span>
                 </div>
                 <div className={`${className}__menu-item`}>
                   <span className={`${className}__item-name`}>
-                    Americano (Nóng/Đá)
+                    Expresso Tonic
                   </span>
                   <span className={`${className}__item-price`}>49.000</span>
                 </div>
                 <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>Americano</span>
+                  <span className={`${className}__item-price`}>49.000</span>
+                </div>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>Latte</span>
+                  <span className={`${className}__item-price`}>49.000</span>
+                </div>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>Cappucino</span>
+                  <span className={`${className}__item-price`}>49.000</span>
+                </div>
+                <div className={`${className}__menu-item`}>
                   <span className={`${className}__item-name`}>Cold Brew</span>
-                  <span className={`${className}__item-price`}>55.000</span>
+                  <span className={`${className}__item-price`}>49.000</span>
+                </div>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>
+                    Cold Brew Tonic
+                  </span>
+                  <span className={`${className}__item-price`}>49.000</span>
                 </div>
               </div>
             </div>
@@ -64,28 +80,40 @@ const MenuSection: React.FC = () => {
               <h3 className={`${className}__category-title`}>TRÀ TRÁI CÂY</h3>
               <div className={`${className}__menu-items`}>
                 <div className={`${className}__menu-item`}>
-                  <span className={`${className}__item-name`}>
-                    Trà xanh đặc biệt
-                  </span>
-                  <span className={`${className}__item-price`}>45.000</span>
+                  <span className={`${className}__item-name`}>Trà Đào</span>
+                  <span className={`${className}__item-price`}>50.000</span>
+                </div>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>Trà Vải</span>
+                  <span className={`${className}__item-price`}>50.000</span>
                 </div>
                 <div className={`${className}__menu-item`}>
                   <span className={`${className}__item-name`}>
-                    Cà phê đen (Nóng/Đá)
+                    Trà Oolong Milk Foam
                   </span>
-                  <span className={`${className}__item-price`}>45.000</span>
+                  <span className={`${className}__item-price`}>50.000</span>
+                </div>
+              </div>
+            </div>
+            <div className={`${className}__menu-category`}>
+              <h3 className={`${className}__category-title`}>MATCHA</h3>
+              <div className={`${className}__menu-items`}>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>
+                    Matcha Latte
+                  </span>
+                  <span className={`${className}__item-price`}>49.000</span>
                 </div>
                 <div className={`${className}__menu-item`}>
                   <span className={`${className}__item-name`}>
-                    Bạc xỉu (Nóng/Đá)
+                    Houjicha Latte
                   </span>
-                  <span className={`${className}__item-price`}>30.000</span>
+                  <span className={`${className}__item-price`}>49.000</span>
                 </div>
               </div>
             </div>
           </Col>
 
-          {/* Right side - Hero image */}
           <Col
             lg={6}
             md={12}
