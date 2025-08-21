@@ -30,29 +30,26 @@
       "href": "https://www.youtube.com/@uricocoffee"
     }
   ],
-    "sectionCategories": [
+  "sectionCategories": [
     {
       "title": "Coffee",
       "image": "static/icons/coffee.png",
       "href": "#coffee"
-
     },
     {
       "title": "Cold coffee",
       "image": "static/icons/cacao.png",
       "href": "#coldcoffee"
-
     },
     {
       "title": "Cup coffee",
-        "image": "static/icons/cup-coffee.png",
-        "href": "#cupcoffee"
+      "image": "static/icons/cup-coffee.png",
+      "href": "#cupcoffee"
     },
     {
       "title": "Cake",
-        "image": "static/icons/cake.png",
-        "href": "#cake"
-
+      "image": "static/icons/cake.png",
+      "href": "#cake"
     }
   ],
   "sectionHeader": {
@@ -74,11 +71,11 @@
   "sectionCarousel": {
     "banners": [
       {
-        "image": "assets/logos/urico_logo_light.svg",
+        "image": "assets/banners/comming-soon.png",
         "alt": "urico"
       },
       {
-        "image": "assets/images/comming-soon/image.png",
+        "image": "assets/banners/scoll-down.png",
         "alt": "image"
       }
     ],
@@ -102,7 +99,7 @@
         "image": "assets/images/gallery/agv_27.png",
         "alt": "urico opening"
       },
-    
+
       {
         "image": "assets/images/gallery/agv_33.png",
         "alt": "urico opening"
@@ -471,6 +468,13 @@
       {
         "name": "Không gian và dịch vụ: Spa thư giãn cho tâm hồn với không gian ấm cúng, wifi miễn phí, khu vực làm việc riêng tư và nhiều hơn nữa, với đầy đủ các dịch vụ như đặt bàn, giao hàng tận nơi và tổ chức sự kiện"
       }
+    ]
+  },
+  "sectionAbout": {
+    "images": [
+      { "image": "assets/images/gallery/agv_27.png", "alt": "urico opening" },
+      { "image": "assets/images/gallery/agv_33.png", "alt": "urico opening" },
+      { "image": "assets/images/gallery/agv_12.png", "alt": "urico opening" }
     ]
   }
 }

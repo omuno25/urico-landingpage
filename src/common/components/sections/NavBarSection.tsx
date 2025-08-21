@@ -15,16 +15,6 @@ const NavBarSection: React.FC = () => {
   const stickyClass = useStickyNavbar();
   const { activeSection } = useScrollEvent();
 
-  // useEffect(() => {
-  //   if (window.location.hash.includes('#')) {
-  //     const routeWithoutHash = window.location.hash.replace(
-  //       `${window.location.hash}`,
-  //       `#${activeSection.split('--')[1]}`,
-  //     );
-  //     window.location.replace(routeWithoutHash);
-  //   }
-  // }, [activeSection]);
-
   useEffect(() => {
     if (router.asPath && router.asPath.length) {
       scrollToSection(`${prefixSection + router.asPath.split('#')[1]}`);

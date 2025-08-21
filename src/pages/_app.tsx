@@ -32,7 +32,7 @@ import '../styles/opening-style.scss';
 import '../styles/category-strip.style.scss';
 import '../styles/countdown-section.style.scss';
 import '../styles/footer-section.style.scss';
-
+import '../styles/about-style.scss';
 
 const inter = Inter({
   subsets: ['latin'],

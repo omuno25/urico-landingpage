@@ -19,7 +19,7 @@ const HomeSection: React.FC = () => {
             src={metadata.sectionCarousel.banners[0].image}
             alt={metadata.sectionCarousel.banners[0].alt}
           />
-          <div className={`${className}__hero__comming-soon`}>
+          <div className={`${className}__hero__scoll-down`}>
             <ImageCommon
               className="d-flex justify-content-center align-items-center"
               src={metadata.sectionCarousel.banners[1].image}

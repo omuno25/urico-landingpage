@@ -14,13 +14,18 @@ interface TimeLeft {
 }
 
 const CountdownSection: React.FC<{ className?: string }> = ({ className }) => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   const calculateTimeLeft = (): TimeLeft => {
     const now = new Date();
     const currentYear = now.getFullYear();
     const targetDate = new Date(currentYear, 7, 15); // August 15th (month is 0-indexed)
-    
+
     // If August 15th has passed this year, target next year
     if (now > targetDate) {
       targetDate.setFullYear(currentYear + 1);
@@ -69,32 +74,41 @@ const CountdownSection: React.FC<{ className?: string }> = ({ className }) => {
                     src="assets/logos/agv_07.png"
                     alt="Company Logo"
                     style={{ width: '400px', height: '400px' }}
-
                   />
                 </div>
                 <h2 className={`${CLASS}__title`}>Coming Soon</h2>
               </div>
-              <p className={`${CLASS}__subtitle`}>Something special is on the way</p>
+              <p className={`${CLASS}__subtitle`}>
+                Something special is on the way
+              </p>
             </div>
-            
+
             <div className={`${CLASS}__countdown-display`}>
               <div className={`${CLASS}__time-unit`}>
-                <div className={`${CLASS}__time-number`}>{formatNumber(timeLeft.days)}</div>
+                <div className={`${CLASS}__time-number`}>
+                  {formatNumber(timeLeft.days)}
+                </div>
                 <div className={`${CLASS}__time-label`}>Ngày</div>
               </div>
               <div className={`${CLASS}__time-separator`}>:</div>
               <div className={`${CLASS}__time-unit`}>
-                <div className={`${CLASS}__time-number`}>{formatNumber(timeLeft.hours)}</div>
+                <div className={`${CLASS}__time-number`}>
+                  {formatNumber(timeLeft.hours)}
+                </div>
                 <div className={`${CLASS}__time-label`}>Giờ</div>
               </div>
               <div className={`${CLASS}__time-separator`}>:</div>
               <div className={`${CLASS}__time-unit`}>
-                <div className={`${CLASS}__time-number`}>{formatNumber(timeLeft.minutes)}</div>
+                <div className={`${CLASS}__time-number`}>
+                  {formatNumber(timeLeft.minutes)}
+                </div>
                 <div className={`${CLASS}__time-label`}>Phút</div>
               </div>
               <div className={`${CLASS}__time-separator`}>:</div>
               <div className={`${CLASS}__time-unit`}>
-                <div className={`${CLASS}__time-number`}>{formatNumber(timeLeft.seconds)}</div>
+                <div className={`${CLASS}__time-number`}>
+                  {formatNumber(timeLeft.seconds)}
+                </div>
                 <div className={`${CLASS}__time-label`}>Giây</div>
               </div>
             </div>
@@ -104,22 +118,33 @@ const CountdownSection: React.FC<{ className?: string }> = ({ className }) => {
           <Col lg={4} md={12} className={`${CLASS}__info-wrapper`}>
             <div className={`${CLASS}__info-header`}>
               <h3 className={`${CLASS}__info-title`}>Thông tin liên hệ</h3>
-              <div className={`${CLASS}__info-subtitle`}>Kết nối với chúng tôi</div>
+              <div className={`${CLASS}__info-subtitle`}>
+                Kết nối với chúng tôi
+              </div>
             </div>
 
             <div className={`${CLASS}__info-content`}>
               {metadata.information.address && (
                 <div className={`${CLASS}__info-item`}>
                   <div className={`${CLASS}__info-icon-wrapper`}>
-                    <div className={`${CLASS}__info-icon ${CLASS}__info-icon--location`}>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    <div
+                      className={`${CLASS}__info-icon ${CLASS}__info-icon--location`}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                       </svg>
                     </div>
                   </div>
                   <div className={`${CLASS}__info-details`}>
                     <div className={`${CLASS}__info-label`}>Địa chỉ</div>
-                    <div className={`${CLASS}__info-value`}>{metadata.information.address}</div>
+                    <div className={`${CLASS}__info-value`}>
+                      {metadata.information.address}
+                    </div>
                   </div>
                 </div>
               )}
@@ -127,9 +152,16 @@ const CountdownSection: React.FC<{ className?: string }> = ({ className }) => {
               {metadata.information.phoneNumber && (
                 <div className={`${CLASS}__info-item`}>
                   <div className={`${CLASS}__info-icon-wrapper`}>
-                    <div className={`${CLASS}__info-icon ${CLASS}__info-icon--phone`}>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    <div
+                      className={`${CLASS}__info-icon ${CLASS}__info-icon--phone`}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                       </svg>
                     </div>
                   </div>
@@ -147,9 +179,16 @@ const CountdownSection: React.FC<{ className?: string }> = ({ className }) => {
               {metadata.information.email && (
                 <div className={`${CLASS}__info-item`}>
                   <div className={`${CLASS}__info-icon-wrapper`}>
-                    <div className={`${CLASS}__info-icon ${CLASS}__info-icon--email`}>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    <div
+                      className={`${CLASS}__info-icon ${CLASS}__info-icon--email`}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                       </svg>
                     </div>
                   </div>

@@ -42,8 +42,12 @@
   }
 
   &__logo {
-    filter: drop-shadow(0 4px 8px rgba(45, 90, 61, 0.15)); // subtle shadow matching workshop theme
-    transition: transform 300ms ease, filter 300ms ease;
+    filter: drop-shadow(
+      0 4px 8px rgba(45, 90, 61, 0.15)
+    ); // subtle shadow matching workshop theme
+    transition:
+      transform 300ms ease,
+      filter 300ms ease;
     border-radius: 8px; // subtle rounding
 
     &:hover {
@@ -103,7 +107,9 @@
     padding: 20px 15px;
     min-width: 80px;
     box-shadow: 0 4px 12px rgba(45, 90, 61, 0.1);
-    transition: transform 300ms ease, box-shadow 300ms ease;
+    transition:
+      transform 300ms ease,
+      box-shadow 300ms ease;
 
     &:hover {
       transform: translateY(-2px);
@@ -162,7 +168,12 @@
   }
 
   &__info-content {
-    background: rgba(255, 255, 255, 0.8); // slightly more opaque for better contrast
+    background: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); // slightly more opaque for better contrast
     border-radius: 16px; // increased border radius for modern look
     padding: 30px;
     box-shadow: 0 8px 24px rgba(45, 90, 61, 0.12); // enhanced shadow
