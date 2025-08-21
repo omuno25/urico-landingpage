@@ -1,6 +1,5 @@
 .st-navbar-section {
   &__navbar {
-    background-color: var(--st-color-primary-900);
     position: fixed;
     top: 0;
     left: 0;
@@ -21,36 +20,20 @@
       text-decoration: none;
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.5);
         transform: translateY(-2px);
       }
     }
 
     .nav-link.active {
       color: var(--st-color-base-white);
-      background-color: rgba(255, 255, 255, 0.2);
-
-      &::before {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 6px;
-        height: 6px;
-        background-color: var(--st-color-base-white);
-        border-radius: 50%;
-      }
-    }
-
-    .icon_a {
-      display: none;
+      background-color: rgba(255, 255, 255, 0.3);
     }
   }
 
   // Sticky navbar effect
   &__navbar.sticky {
-    background-color: rgba(45, 90, 61, 0.95);
+    background-color: var(--st-color-primary-900);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   }

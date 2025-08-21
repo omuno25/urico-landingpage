@@ -57,7 +57,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ metadata }) => {
         <meta property="og:url" content="https://urico.vn/" />
         <meta
           property="og:image"
-          content="https://urico.vn/static/bg/slide_1.webp"
+          content="https://urico.vn/assets/images/logos/urico_logo_semi_dark.png"
         />
         <link rel="canonical" href="https://urico.vn/" />
 
