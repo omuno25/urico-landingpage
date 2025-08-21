@@ -38,6 +38,7 @@ assets/
 ## Adding New Assets
 
 When adding new assets:
+
 1. Choose the appropriate subdirectory
 2. Use descriptive, lowercase names with underscores
 3. Optimize images for web (compress, appropriate dimensions)

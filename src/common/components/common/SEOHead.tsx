@@ -61,7 +61,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({ metadata }) => {
         />
         <link rel="canonical" href="https://urico.vn/" />
 
-        {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

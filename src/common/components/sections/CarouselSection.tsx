@@ -1,64 +1,10 @@
-import { useState, useEffect } from 'react';
 import metadata from '../../../data/metadata.json';
 import { SectionName } from '../../utils/enum';
 import { ImageCommon } from '../common';
 
 const className = 'st-carousel-section';
 
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
 const CarouselSection: React.FC = () => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  const calculateTimeLeft = (): TimeLeft => {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-    const targetDate = new Date(currentYear, 7, 23); // August 15th (month is 0-indexed)
-
-    // If August 15th has passed this year, target next year
-    if (now > targetDate) {
-      targetDate.setFullYear(currentYear + 1);
-    }
-
-    const difference = targetDate.getTime() - now.getTime();
-
-    if (difference > 0) {
-      return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    // Set initial time
-    setTimeLeft(calculateTimeLeft());
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatNumber = (num: number): string => {
-    return num.toString().padStart(2, '0');
-  };
-
   return (
     <div
       id={`section--${SectionName.station}`}

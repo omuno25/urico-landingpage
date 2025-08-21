@@ -27,7 +27,11 @@
   &__content {
     margin-bottom: clamp(20px, 5vw, 60px);
     // Adaptive gap that considers container constraints
-    gap: clamp(15px, 3vw, 30px); // Increased gap for better spacing with larger logo
+    gap: clamp(
+      15px,
+      3vw,
+      30px
+    ); // Increased gap for better spacing with larger logo
     display: flex;
     flex-wrap: wrap; // Allow wrapping when space is tight
     align-items: flex-start;
@@ -84,7 +88,9 @@
   &__logo {
     margin-bottom: clamp(8px, 2vw, 20px);
     filter: brightness(0) invert(1); // make logo white
-    transition: transform 300ms ease, opacity 300ms ease;
+    transition:
+      transform 300ms ease,
+      opacity 300ms ease;
 
     // Increased logo sizing for better visual prominence
     height: clamp(80px, 12vw, 140px); // Increased from previous smaller size
@@ -97,7 +103,9 @@
 
     // Container-query aware hover scaling
     &:hover {
-      transform: scale(clamp(1.03, 1.05, 1.08)); // Slightly more prominent hover scale
+      transform: scale(
+        clamp(1.03, 1.05, 1.08)
+      ); // Slightly more prominent hover scale
       opacity: 0.9;
     }
 

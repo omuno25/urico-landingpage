@@ -1,7 +1,7 @@
 import { CSSProperties, ForwardedRef, useRef, useState } from 'react';
 import { Pagination, Grid, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Lightbox, { ThumbnailsRef } from 'yet-another-react-lightbox';
+import { ThumbnailsRef, Lightbox } from 'yet-another-react-lightbox';
 import Counter from 'yet-another-react-lightbox/plugins/counter';
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 

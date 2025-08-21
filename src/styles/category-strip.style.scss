@@ -10,14 +10,20 @@
     margin: 0 auto;
     padding: 0 var(--st-spacing-04);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); // flexible columns for individual sizing
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(80px, 1fr)
+    ); // flexible columns for individual sizing
     align-items: start; // align to start to accommodate varying heights
     justify-items: center;
     column-gap: 16px; // reduced from 24px
     row-gap: 12px; // increased for varying heights
   }
 
-  &__link { text-decoration: none; color: inherit; }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
 
   &__item {
     display: flex;
@@ -26,7 +32,9 @@
     gap: 6px;
     min-width: 80px; // default minimum width (can be overridden by inline styles)
     text-align: center;
-    transition: transform 300ms ease, box-shadow 300ms ease; // smooth transitions for individual items
+    transition:
+      transform 300ms ease,
+      box-shadow 300ms ease; // smooth transitions for individual items
   }
 
   &__icon-wrap {
@@ -39,9 +47,14 @@
   }
 
   &__icon {
-    filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(1200%) hue-rotate(120deg) brightness(95%) contrast(90%);
+    filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(1200%)
+      hue-rotate(120deg) brightness(95%) contrast(90%);
     /* produces workshop-section dark green tone (#2d5a3d) */
-    transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease, box-shadow 300ms ease;
+    transition:
+      transform 300ms ease,
+      filter 300ms ease,
+      opacity 300ms ease,
+      box-shadow 300ms ease;
     opacity: 0.9;
     border-radius: 8px; // subtle rounding like workshop images
   }
@@ -74,7 +87,10 @@
     &__container {
       max-width: 95%;
       padding: 0 var(--st-spacing-03);
-      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); // flexible for individual sizing
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(70px, 1fr)
+      ); // flexible for individual sizing
       column-gap: 12px; // moderate spacing for tablet
       row-gap: 10px; // accommodate varying heights
     }
@@ -84,7 +100,9 @@
       transform: scale(0.95);
       transform-origin: center;
     }
-    &__label { font-size: 13px; }
+    &__label {
+      font-size: 13px;
+    }
   }
 
   // Mobile - flexible columns with individual sizing support
@@ -93,7 +111,10 @@
     &__container {
       max-width: 100%;
       padding: 0 var(--st-spacing-03);
-      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); // flexible for individual sizing
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(60px, 1fr)
+      ); // flexible for individual sizing
       column-gap: 10px; // tighter spacing for mobile
       row-gap: 12px; // accommodate varying heights
     }
@@ -109,4 +130,3 @@
     }
   }
 }
-
