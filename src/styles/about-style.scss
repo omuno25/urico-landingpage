@@ -1,14 +1,74 @@
 .st-about-section {
   &__container {
-    background-color: #fffdf0;
-    padding: var(--st-spacing-13) var(--st-spacing-13);
+    max-width: 1400px;
+    margin: 0 auto;
+
+    &__row {
+      padding: var(--st-spacing-13) var(--st-spacing-13);
+      align-items: center;
+      min-height: 60vh; // Ensure good height on desktop
+
+      // Ultra-wide screens (> 1600px)
+      @media (min-width: 1600px) {
+        padding: var(--st-spacing-16) var(--st-spacing-16);
+      }
+
+      // Large desktop (1200px - 1599px)
+      @media (max-width: 1599px) and (min-width: 1200px) {
+        padding: var(--st-spacing-15) var(--st-spacing-15);
+      }
+
+      // Medium desktop (992px - 1199px)
+      @media (max-width: 1199px) and (min-width: 992px) {
+        padding: var(--st-spacing-12) var(--st-spacing-12);
+      }
+
+      // Tablet landscape (768px - 991px)
+      @media (max-width: 991px) and (min-width: 768px) {
+        padding: var(--st-spacing-10) var(--st-spacing-08);
+        min-height: 50vh;
+      }
+
+      // Mobile large (576px - 767px)
+      @media (max-width: 767px) and (min-width: 576px) {
+        padding: var(--st-spacing-08) var(--st-spacing-06);
+        min-height: auto;
+        flex-direction: column;
+      }
+
+      // Mobile small (< 576px)
+      @media (max-width: 575px) {
+        padding: var(--st-spacing-06) var(--st-spacing-04);
+        min-height: auto;
+        flex-direction: column;
+      }
+    }
 
     &__text-left {
+      padding-right: var(--st-spacing-06);
+
       &__title {
         font-size: var(--st-font-size-11);
         color: var(--st-color-primary-900);
         font-weight: 700;
         margin-bottom: var(--st-spacing-05);
+
+        // Responsive font sizes
+        @media (max-width: 991px) and (min-width: 768px) {
+          font-size: var(--st-font-size-10);
+        }
+
+        @media (max-width: 767px) and (min-width: 576px) {
+          font-size: var(--st-font-size-09);
+          text-align: center;
+          margin-bottom: var(--st-spacing-04);
+        }
+
+        @media (max-width: 575px) {
+          font-size: var(--st-font-size-08);
+          text-align: center;
+          margin-bottom: var(--st-spacing-03);
+        }
       }
 
       &__description {
@@ -16,12 +76,128 @@
         color: var(--st-color-primary-900);
         font-weight: 400;
         line-height: 30px;
+
+        // Responsive font sizes and line heights
+        @media (max-width: 991px) and (min-width: 768px) {
+          font-size: var(--st-font-size-02);
+          line-height: 26px;
+        }
+
+        @media (max-width: 767px) and (min-width: 576px) {
+          font-size: var(--st-font-size-02);
+          line-height: 24px;
+          text-align: left;
+        }
+
+        @media (max-width: 575px) {
+          font-size: var(--st-font-size-01);
+          line-height: 22px;
+          text-align: left;
+        }
+      }
+
+      // Responsive padding adjustments
+      @media (max-width: 991px) and (min-width: 768px) {
+        padding-right: var(--st-spacing-04);
+        margin-bottom: var(--st-spacing-06);
+      }
+
+      @media (max-width: 767px) {
+        padding-right: 0;
+        margin-bottom: var(--st-spacing-07);
+      }
+
+      @media (max-width: 575px) {
+        margin-bottom: var(--st-spacing-06);
       }
     }
+
     &__image-right {
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      aspect-ratio: 4 / 3; // Set consistent aspect ratio
+      height: auto;
+      transition:
+        transform 220ms ease,
+        box-shadow 220ms ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 220ms ease;
+      }
+
+      &:hover img {
+        transform: scale(1.02);
+      }
+
+      // Responsive aspect ratios and styling
+      @media (max-width: 991px) and (min-width: 768px) {
+        aspect-ratio: 16 / 10; // Slightly wider on tablet
+        border-radius: 10px;
+      }
+
+      @media (max-width: 767px) and (min-width: 576px) {
+        aspect-ratio: 4 / 3;
+        margin-bottom: var(--st-spacing-06);
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      @media (max-width: 575px) {
+        aspect-ratio: 16 / 10; // Wider aspect ratio for small screens
+        margin-bottom: var(--st-spacing-04);
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+  }
+
+  // Additional container-level responsive adjustments
+  @media (max-width: 1440px) {
+    &__container {
+      margin: 0 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__container {
+      margin: 0 15px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__container {
+      margin: 0 10px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    &__container {
+      margin: 0 5px;
+    }
+  }
+
+  // Ultra-wide screens additional constraints
+  @media (min-width: 1600px) {
+    &__container {
+      max-width: 1600px;
+
+      &__image-right {
+        max-height: 60vh; // Prevent image from becoming too large
+      }
     }
   }
 }
