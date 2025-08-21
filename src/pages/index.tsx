@@ -40,7 +40,7 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
           <NavBarSection />
           <CarouselSection />
           {/* <CategoryStripSection /> */}
-          <AboutSection />
+          {/* <AboutSection /> */}
           <OpeningSection />
           <MenuSection />
           <FooterCommon />
