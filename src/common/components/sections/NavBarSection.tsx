@@ -6,6 +6,7 @@ import metadata from '../../../data/metadata.json';
 import { useStickyNavbar } from '../../hooks';
 import useScrollEvent from '../../hooks/useScrollEvent';
 import { scrollToSection } from '../../utils/scroll';
+import Image from 'next/image';
 
 const className = 'st-navbar-section';
 const prefixSection = 'section--';
@@ -26,29 +27,43 @@ const NavBarSection: React.FC = () => {
   };
 
   return (
-    <Navbar expand="lg" className={`${stickyClass} ${className}__navbar`}>
-      <Container className="justify-content-center">
-        <Navbar>
-          <Nav>
-            {metadata.sectionNavbar.items.map((item, i) => (
-              <Nav.Link
-                onClick={() => handleSelectNavBar(`${prefixSection + item.id}`)}
-                key={i}
-                className={`${activeSection === `${prefixSection + item.id}` ? 'active' : ''}`}
-                active={false}
-              >
-                <Stack>
-                  <span
-                    className={`text-center ${activeSection === `${prefixSection + item.id}` ? 'visible' : 'invisible'}`}
-                  ></span>
-                  {item.name}
-                </Stack>
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar>
-      </Container>
-    </Navbar>
+    <div>
+      <Navbar expand="lg" className={`${stickyClass} ${className}__navbar`}>
+        <Image
+          className={`${className}__logo`}
+          style={{
+            marginLeft: '1rem',
+          }}
+          width={150}
+          height={10}
+          src={`/${metadata.sectionNavbar.logo}`}
+          alt={metadata.sectionNavbar.logo}
+        />
+        <Container className="justify-content-center">
+          <Navbar>
+            <Nav>
+              {metadata.sectionNavbar.items.map((item, i) => (
+                <Nav.Link
+                  onClick={() =>
+                    handleSelectNavBar(`${prefixSection + item.id}`)
+                  }
+                  key={i}
+                  className={`${activeSection === `${prefixSection + item.id}` ? 'active' : ''}`}
+                  active={false}
+                >
+                  <Stack>
+                    <span
+                      className={`text-center ${activeSection === `${prefixSection + item.id}` ? 'visible' : 'invisible'}`}
+                    ></span>
+                    {item.name}
+                  </Stack>
+                </Nav.Link>
+              ))}
+            </Nav>
+          </Navbar>
+        </Container>
+      </Navbar>
+    </div>
   );
 };
 

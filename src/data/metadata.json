@@ -57,6 +57,7 @@
     "altImage": "Image"
   },
   "sectionNavbar": {
+    "logo": "assets/logos/urico_logo_light.svg",
     "items": [
       {
         "name": "Trang chủ",
