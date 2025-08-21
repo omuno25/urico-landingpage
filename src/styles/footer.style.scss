@@ -7,7 +7,10 @@
   &__icon {
     filter: brightness(0) invert(1); // turn dark svg to white-like
     opacity: 0.95;
-    transition: opacity 200ms ease, transform 200ms ease, filter 200ms ease;
+    transition:
+      opacity 200ms ease,
+      transform 200ms ease,
+      filter 200ms ease;
   }
   a:hover &__icon,
   a:focus-visible &__icon {

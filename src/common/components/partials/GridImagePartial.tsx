@@ -1,6 +1,6 @@
 import { ForwardedRef, useRef, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import Lightbox, { ThumbnailsRef } from 'yet-another-react-lightbox';
+import { ThumbnailsRef, Lightbox } from 'yet-another-react-lightbox';
 import Counter from 'yet-another-react-lightbox/plugins/counter';
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 

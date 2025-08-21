@@ -476,5 +476,31 @@
       { "image": "assets/images/gallery/agv_33.png", "alt": "urico opening" },
       { "image": "assets/images/gallery/agv_12.png", "alt": "urico opening" }
     ]
+  },
+  "sectionFooter": {
+    "logo": {
+      "src": "assets/logos/urico_logo_semi_dark.png",
+      "alt": "URICO Logo",
+      "tagline": "CO-WORKING SPACE & COFFEE"
+    },
+    "columns": [
+      {
+        "title": "Trang chủ",
+        "links": [
+          { "title": "Giới thiệu", "href": "#about" },
+          { "title": "Menu", "href": "#menu" },
+          { "title": "Liên hệ", "href": "#contact" }
+        ]
+      },
+      {
+        "title": "Social Media",
+        "links": [
+          { "title": "Instagram", "href": "https://instagram.com/uricocoffee" },
+          { "title": "Facebook", "href": "https://facebook.com/uricocoffee" },
+          { "title": "Tiktok", "href": "https://tiktok.com/@uricocoffee" },
+          { "title": "Youtube", "href": "https://youtube.com/@uricocoffee" }
+        ]
+      }
+    ]
   }
 }
