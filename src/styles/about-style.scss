@@ -1,5 +1,27 @@
 .st-about-section {
-  background-color: #fffdf0; // workshop-section green background
   &__container {
+    background-color: #fffdf0;
+    padding: var(--st-spacing-13) var(--st-spacing-13);
+
+    &__text-left {
+      &__title {
+        font-size: var(--st-font-size-11);
+        color: var(--st-color-primary-900);
+        font-weight: 700;
+        margin-bottom: var(--st-spacing-05);
+      }
+
+      &__description {
+        font-size: var(--st-font-size-03);
+        color: var(--st-color-primary-900);
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+    &__image-right {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
   }
 }

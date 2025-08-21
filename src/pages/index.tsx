@@ -3,13 +3,12 @@ import SEOHead from '../common/components/common/SEOHead';
 import { CarouselSection } from '../common/components/sections';
 import MenuSection from '../common/components/sections/MenuSection';
 import NavBarSection from '../common/components/sections/NavBarSection';
-import OpeningSection from '../common/components/sections/OpeningSection';
-import CategoryStripSection from '../common/components/sections/CategoryStripSection';
 
 import { useCheckMobileScreen } from '../common/hooks';
 import metadataJson from '../data/metadata.json';
 import AboutSection from '../common/components/sections/AboutSection';
 import { FooterCommon } from '../common/components/common';
+import FrameSection from '../common/components/sections/FrameSection';
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -29,19 +28,17 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
         <main>
           <NavBarSection />
           <CarouselSection />
-          <CategoryStripSection />
-          <OpeningSection />
+          <AboutSection />
+          <FrameSection />
           <MenuSection />
           <FooterCommon />
         </main>
       ) : (
         <main>
-          {/* <HeaderCommon /> */}
           <NavBarSection />
           <CarouselSection />
-          {/* <CategoryStripSection /> */}
           <AboutSection />
-          <OpeningSection />
+          <FrameSection />
           <MenuSection />
           <FooterCommon />
         </main>

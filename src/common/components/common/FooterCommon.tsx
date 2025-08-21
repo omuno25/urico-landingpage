@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import SvgIcon from './SvgIcon';
 import metadata from '../../../data/metadata.json';
 import { useCheckMobileScreen } from '../../hooks';
+import { SectionName } from '../../utils/enum';
 
 const className = 'st-footer-common';
 
@@ -12,7 +13,7 @@ const FooterCommon: React.FC = () => {
 
   const sizeIconSocial = isMobile ? '24' : '40';
   return (
-    <footer className={className}>
+    <footer id={`section--${SectionName.contact}`} className={className}>
       <Container className={`text-center py-2 py-sm-4 ${className}__container`}>
         {metadata.socials.map((item, i) => (
           <Link

@@ -19,6 +19,7 @@ type GridImage = {
 };
 type GridImagePartialProps = {
   images: GridImage[] | undefined;
+  className?: string;
 };
 
 const GridImagePartial: React.FC<GridImagePartialProps> = (
@@ -40,15 +41,11 @@ const GridImagePartial: React.FC<GridImagePartialProps> = (
   };
 
   return (
-    <div className={`${className}__container`}>
+    <div className={`${className}__container ${props.className || ''}`}>
       {rows.map((row: GenericObject, i: number) => (
         <Row key={i}>
           {row.map((item: GenericObject, j: number) => (
-            <Col
-              key={j}
-              className="p-0"
-              onClick={() => handleClickImage(i * ROW_ITEM + j)}
-            >
+            <Col key={j} onClick={() => handleClickImage(i * ROW_ITEM + j)}>
               <ImageCommon src={`${item.image}`} />
             </Col>
           ))}

@@ -63,8 +63,16 @@
         "id": "urico-coffee"
       },
       {
+        "name": "Giới thiệu",
+        "id": "gioi-thieu"
+      },
+      {
         "name": "Menu",
         "id": "menu"
+      },
+      {
+        "name": "Liên hệ",
+        "id": "lien-he"
       }
     ]
   },
@@ -86,6 +94,7 @@
     }
   },
   "sectionMenu": {
+    "menuImage": "assets/frames/frame_menu.png",
     "images": [
       {
         "image": "assets/images/menu/agv_15.png",
@@ -475,6 +484,12 @@
       { "image": "assets/images/gallery/agv_27.png", "alt": "urico opening" },
       { "image": "assets/images/gallery/agv_33.png", "alt": "urico opening" },
       { "image": "assets/images/gallery/agv_12.png", "alt": "urico opening" }
+    ],
+    "sliders": [
+      { "image": "assets/images/gallery/rect1.png", "alt": "urico opening" },
+      { "image": "assets/images/gallery/rect2.png", "alt": "urico opening" },
+      { "image": "assets/images/gallery/rect3.png", "alt": "urico opening" },
+      { "image": "assets/images/gallery/rect4.png", "alt": "urico opening" }
     ]
   },
   "sectionFooter": {
@@ -502,5 +517,8 @@
         ]
       }
     ]
+  },
+  "sectionFrame": {
+    "description": "MỘT KHÔNG GIAN KẾT HỢP GIỮA CO-WORKING SPACE VÀ PHỤC VỤ CÀ PHÊ HOÀN TOÀN MỚI."
   }
 }

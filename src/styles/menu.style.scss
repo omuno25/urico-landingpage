@@ -1,6 +1,6 @@
 .st-menu-section {
   &__container {
-    background-color: #f8f9fa;
+    background-color: #fffdf0;
     padding: 0;
     position: relative;
   }
@@ -8,7 +8,6 @@
   // Menu content (left side)
   &__menu-content {
     padding: 60px 40px;
-    background-color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

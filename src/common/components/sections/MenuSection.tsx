@@ -21,7 +21,10 @@ const MenuSection: React.FC = () => {
             className={`${className}__menu-content order-1 order-lg-1`}
           >
             <div className={`${className}__menu-header`}>
-              <h1 className={`${className}__menu-title`}>MENU</h1>
+              <ImageCommon
+                src={metadata.sectionMenu.menuImage}
+                alt={metadata.sectionMenu.menuImage}
+              />
             </div>
 
             {/* Coffee Section */}
@@ -75,6 +78,24 @@ const MenuSection: React.FC = () => {
               </div>
             </div>
 
+            <div className={`${className}__menu-category`}>
+              <h3 className={`${className}__category-title`}>MATCHA</h3>
+              <div className={`${className}__menu-items`}>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>
+                    Matcha Latte
+                  </span>
+                  <span className={`${className}__item-price`}>49.000</span>
+                </div>
+                <div className={`${className}__menu-item`}>
+                  <span className={`${className}__item-name`}>
+                    Houjicha Latte
+                  </span>
+                  <span className={`${className}__item-price`}>49.000</span>
+                </div>
+              </div>
+            </div>
+
             {/* Tea Section */}
             <div className={`${className}__menu-category`}>
               <h3 className={`${className}__category-title`}>TRÀ TRÁI CÂY</h3>
@@ -95,23 +116,6 @@ const MenuSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className={`${className}__menu-category`}>
-              <h3 className={`${className}__category-title`}>MATCHA</h3>
-              <div className={`${className}__menu-items`}>
-                <div className={`${className}__menu-item`}>
-                  <span className={`${className}__item-name`}>
-                    Matcha Latte
-                  </span>
-                  <span className={`${className}__item-price`}>49.000</span>
-                </div>
-                <div className={`${className}__menu-item`}>
-                  <span className={`${className}__item-name`}>
-                    Houjicha Latte
-                  </span>
-                  <span className={`${className}__item-price`}>49.000</span>
-                </div>
-              </div>
-            </div>
           </Col>
 
           <Col
@@ -125,41 +129,6 @@ const MenuSection: React.FC = () => {
                 alt={metadata.sectionMenu.images[0].alt}
                 className={`${className}__hero-img`}
               />
-            </div>
-          </Col>
-        </Row>
-
-        {/* Bottom section - Workshop info */}
-        <Row className={`${className}__workshop-section`}>
-          <Col lg={6} md={12}>
-            <div className={`${className}__workshop-info`}>
-              <p className={`${className}__workshop-label`}>
-                WORKSHOP CUỐI TUẦN
-              </p>
-              <h2 className={`${className}__workshop-title`}>CERAMIC</h2>
-            </div>
-          </Col>
-          <Col lg={6} md={12}>
-            <div className={`${className}__workshop-details`}>
-              <div className={`${className}__workshop-date`}>
-                <p>THỨ BẢY</p>
-                <p>22/9/2025</p>
-                <p>3PM-6PM</p>
-              </div>
-            </div>
-          </Col>
-        </Row>
-
-        {/* Workshop images */}
-        <Row className={`${className}__workshop-images`}>
-          <Col lg={6} md={6} sm={12} className="mb-3 mb-md-0">
-            <div className={`${className}__workshop-image-left`}>
-              <div className={`${className}__ceramic-image`}></div>
-            </div>
-          </Col>
-          <Col lg={6} md={6} sm={12}>
-            <div className={`${className}__workshop-image-right`}>
-              <div className={`${className}__activity-image`}></div>
             </div>
           </Col>
         </Row>
