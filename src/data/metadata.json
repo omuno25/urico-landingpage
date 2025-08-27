@@ -72,6 +72,10 @@
         "id": "menu"
       },
       {
+        "name": "Order",
+        "id": "order"
+      },
+      {
         "name": "Liên hệ",
         "id": "lien-he"
       }

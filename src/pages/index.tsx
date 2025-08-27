@@ -9,6 +9,7 @@ import metadataJson from '../data/metadata.json';
 import AboutSection from '../common/components/sections/AboutSection';
 import { FooterCommon } from '../common/components/common';
 import FrameSection from '../common/components/sections/FrameSection';
+import OrderSection from '../common/components/sections/OrderSection';
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -29,6 +30,7 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
           <NavBarSection />
           <CarouselSection />
           <AboutSection />
+          <OrderSection />
           <FrameSection />
           <MenuSection />
           <FooterCommon />
@@ -38,6 +40,7 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
           <NavBarSection />
           <CarouselSection />
           <AboutSection />
+          <OrderSection />
           <FrameSection />
           <MenuSection />
           <FooterCommon />

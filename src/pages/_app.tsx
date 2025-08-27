@@ -35,6 +35,7 @@ import '../styles/footer-section.style.scss';
 import '../styles/about-style.scss';
 import '../styles/grid-image-partial.scss';
 import '../styles/frame-section.style.scss';
+import '../styles/order-section.style.scss';
 
 const inter = Inter({
   subsets: ['latin'],
