@@ -491,10 +491,10 @@
       { "image": "assets/images/gallery/agv_12.png", "alt": "urico opening" }
     ],
     "sliders": [
-      { "image": "assets/images/gallery/rect1.png", "alt": "urico opening" },
-      { "image": "assets/images/gallery/rect2.png", "alt": "urico opening" },
-      { "image": "assets/images/gallery/rect3.png", "alt": "urico opening" },
-      { "image": "assets/images/gallery/rect4.png", "alt": "urico opening" }
+      { "image": "assets/images/gallery/rect1.webp", "alt": "urico opening" },
+      { "image": "assets/images/gallery/rect2.webp", "alt": "urico opening" },
+      { "image": "assets/images/gallery/rect3.webp", "alt": "urico opening" },
+      { "image": "assets/images/gallery/rect4.webp", "alt": "urico opening" }
     ]
   },
   "sectionFooter": {
@@ -524,6 +524,7 @@
     ]
   },
   "sectionFrame": {
+    "images": [{ "image": "assets/frames/frame1.png", "alt": "urico frame" }],
     "description": "MỘT KHÔNG GIAN KẾT HỢP GIỮA CO-WORKING SPACE VÀ PHỤC VỤ CÀ PHÊ HOÀN TOÀN MỚI."
   }
 }

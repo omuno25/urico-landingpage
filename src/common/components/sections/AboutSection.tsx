@@ -41,7 +41,7 @@ const AboutSection: React.FC = () => {
           </div>
         </Col>
       </Row>
-      <Row className="mt-5">
+      <Row>
         <GridImagePartial images={sliderImages} />
       </Row>
     </div>

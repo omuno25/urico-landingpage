@@ -62,8 +62,10 @@ const GridImagePartial: React.FC<GridImagePartialProps> = (
               <ImageCommon
                 src={`${item.image}`}
                 style={{
+                  padding: '0.5rem',
+                  borderRadius: '12px',
                   width: '100%',
-                  height: '100%',
+                  height: '30vh',
                   objectFit: 'cover',
                 }}
               />
