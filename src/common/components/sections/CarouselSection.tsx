@@ -1,6 +1,6 @@
-import metadata from '../../../data/metadata.json';
+// import metadata from '../../../data/metadata.json';
 import { SectionName } from '../../utils/enum';
-import { ImageCommon } from '../common';
+// import { ImageCommon } from '../common';
 
 const className = 'st-carousel-section';
 
