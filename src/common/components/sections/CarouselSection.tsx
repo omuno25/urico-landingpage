@@ -13,11 +13,10 @@ const CarouselSection: React.FC = () => {
       <div className={`${className}__container__content-center`}>
         <div className="d-flex flex-column justify-content-center align-items-center gap-4">
           <div className={`${className}__container__scoll-down`}>
-            <ImageCommon
+            {/* <ImageCommon
               src={metadata.sectionCarousel.banners[1].image}
               alt={metadata.sectionCarousel.banners[1].alt}
-              style={{ width: '70%', objectFit: 'cover' }}
-            />
+            /> */}
           </div>
         </div>
       </div>

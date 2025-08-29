@@ -1,6 +1,10 @@
 import { GetStaticProps } from 'next';
 import SEOHead from '../common/components/common/SEOHead';
-import { CarouselSection } from '../common/components/sections';
+import {
+  CarouselSection,
+  MobileCarouselSection,
+  MobileNavBarSection,
+} from '../common/components/sections';
 import MenuSection from '../common/components/sections/MenuSection';
 import NavBarSection from '../common/components/sections/NavBarSection';
 
@@ -27,8 +31,8 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
 
       {isMobile ? (
         <main>
-          <NavBarSection />
-          <CarouselSection />
+          <MobileNavBarSection />
+          <MobileCarouselSection />
           <AboutSection />
           <OrderSection />
           <FrameSection />

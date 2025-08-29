@@ -1,44 +1,18 @@
 .st-mobile-carousel-section {
   &__container {
-    padding-top: 71px;
-
-    &__middle-content {
-      padding: var(--st-spacing-05);
+    &__banner {
       position: relative;
-      width: 100%;
+      z-index: 1;
     }
 
-    &__bg-decor {
-      bottom: 8%;
-      height: 19%;
-      opacity: 0.8;
+    &__backdrop {
       position: absolute;
-      text-align: center;
-      width: calc(100% - 7.8vw);
-
-      &__icon-left {
-        margin-left: 0.5rem;
-      }
-      &__icon-right {
-        margin-right: 0.5rem;
-      }
-    }
-
-    &__card {
-      background-color: var(--st-color-primary-400);
-      border-radius: calc(var(--st-border-radius-02) + 2px);
-      padding-bottom: var(--st-spacing-06);
-      padding-left: var(--st-spacing-05);
-      padding-right: var(--st-spacing-05);
-      padding-top: var(--st-spacing-06);
-      text-align: center;
-    }
-
-    &__description {
-      color: var(--st-color-primary-800);
-      font-size: var(--st-font-size-02);
-      font-weight: 400;
-      line-height: 17px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 0;
     }
   }
 }

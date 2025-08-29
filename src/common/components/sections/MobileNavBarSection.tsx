@@ -1,30 +1,20 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Stack } from 'react-bootstrap';
 
 import metadata from '../../../data/metadata.json';
-import { useScrollEvent } from '../../hooks';
+import { useStickyNavbar } from '../../hooks';
+import useScrollEvent from '../../hooks/useScrollEvent';
 import { scrollToSection } from '../../utils/scroll';
-import { SvgIcon } from '../common';
+import Image from 'next/image';
 
 const className = 'st-mobile-navbar-section';
 const prefixSection = 'section--';
 
-const MobileNavBarSection: React.FC = () => {
+const NavBarSection: React.FC = () => {
   const router = useRouter();
+  const stickyClass = useStickyNavbar();
   const { activeSection } = useScrollEvent();
-
-  useEffect(() => {
-    if (window.location.hash.includes('#')) {
-      const routeWithoutHash = window.location.hash.replace(
-        `${window.location.hash}`,
-        `#${activeSection.split('--')[1]}`,
-      );
-      window.location.replace(routeWithoutHash);
-    } else {
-      window.location.hash = `${activeSection.split('--')[1]}`;
-    }
-  }, [activeSection]);
 
   useEffect(() => {
     if (router.asPath && router.asPath.length) {
@@ -32,45 +22,48 @@ const MobileNavBarSection: React.FC = () => {
     }
   }, [router]);
 
-  const handleLinkClick = (section: string) => {
+  const handleSelectNavBar = (section: string) => {
     scrollToSection(section);
   };
+
   return (
-    <Navbar
-      bg="white"
-      fixed="top"
-      expand="sm"
-      className={`${className}__navbar`}
-    >
-      <Container>
-        <Navbar.Brand href="#">
+    <div>
+      <Navbar expand="lg" className={`${stickyClass} ${className}__navbar `}>
+        <div className="d-flex w-100 justify-content-center">
           <Image
-            className="img-fluid"
-            width={200}
-            src={metadata.sectionHeader.image}
-            alt={metadata.sectionHeader.altImage}
+            className={`${className}__logo`}
+            width={150}
+            height={10}
+            src={`/${metadata.sectionNavbar.logo}`}
+            alt={metadata.sectionNavbar.logo}
           />
-        </Navbar.Brand>
-        <Navbar.Toggle>
-          <SvgIcon id="hambuger" className="pb-1" />
-        </Navbar.Toggle>
-        <Navbar.Collapse>
-          <Nav className="ml-auto">
-            {metadata.sectionNavbar.items.map((item, i) => (
-              <Nav.Link
-                onClick={() => handleLinkClick(`${prefixSection + item.id}`)}
-                key={i}
-                className={`${activeSection === `${prefixSection + item.id}` ? 'active' : ''} ${className}__navbar__link`}
-                active={false}
-              >
-                {item.name}
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </div>
+        <Container className="justify-content-center">
+          <Navbar>
+            <Nav>
+              {metadata.sectionNavbar.items.map((item, i) => (
+                <Nav.Link
+                  onClick={() =>
+                    handleSelectNavBar(`${prefixSection + item.id}`)
+                  }
+                  key={i}
+                  className={`${activeSection === `${prefixSection + item.id}` ? 'active' : ''}`}
+                  active={false}
+                >
+                  <Stack>
+                    <span
+                      className={`text-center ${activeSection === `${prefixSection + item.id}` ? 'visible' : 'invisible'}`}
+                    ></span>
+                    {item.name}
+                  </Stack>
+                </Nav.Link>
+              ))}
+            </Nav>
+          </Navbar>
+        </Container>
+      </Navbar>
+    </div>
   );
 };
 
-export default MobileNavBarSection;
+export default NavBarSection;

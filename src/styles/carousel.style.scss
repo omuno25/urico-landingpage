@@ -1,12 +1,10 @@
 .st-carousel-section {
   &__container {
-    // background-color: var(--st-color-primary-900);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 80px;
     background-image: url('/assets/banners/banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,8 +20,9 @@
     }
 
     &__content-center {
-      padding-top: 5rem;
       position: absolute;
+      top: 15%;
+      left: 30%;
       width: 100%;
       display: flex;
       align-items: center;
@@ -31,95 +30,9 @@
       z-index: 1;
 
       img {
-        max-width: 100%;
+        max-width: 50%;
         height: auto;
         object-fit: contain;
-      }
-    }
-
-    &__countdown {
-      margin-top: 5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-
-      &__time-unit {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 12px;
-        padding: 20px 15px;
-        min-width: 80px;
-        box-shadow: 0 4px 12px rgba(45, 90, 61, 0.1);
-        transition:
-          transform 300ms ease,
-          box-shadow 300ms ease;
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(45, 90, 61, 0.15);
-        }
-      }
-
-      &__time-number {
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: #2d5a3d; // workshop-section dark green
-        line-height: 1;
-        margin-bottom: 5px;
-        transition: color 300ms ease;
-      }
-
-      &__time-separator {
-        font-size: 2rem;
-        font-weight: 900;
-        color: #2d5a3d;
-        margin: 0 5px;
-      }
-
-      &__time-label {
-        font-size: 0.9rem;
-        color: #4a90a4; // workshop-section accent blue
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-    }
-  }
-
-  // Mobile responsiveness
-  @media (max-width: 767px) {
-    &__container {
-      min-height: 100vh;
-      padding-top: 70px;
-
-      &__content-center {
-        height: calc(100vh - 70px);
-        padding: 15px;
-      }
-
-      &__scoll-down {
-        padding: 0 15px;
-        padding-bottom: var(--st-spacing-06);
-      }
-    }
-  }
-
-  @media (max-width: 575px) {
-    &__container {
-      padding-top: 60px;
-
-      &__content-center {
-        height: calc(100vh - 60px);
-        padding: 10px;
-      }
-
-      &__scoll-down {
-        padding: 0 10px;
-        padding-bottom: var(--st-spacing-05);
       }
     }
   }

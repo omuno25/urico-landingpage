@@ -17,7 +17,7 @@ assets/
 │   └── ui/          # UI elements, buttons, decorative images
 └── logos/           # Company logos and branding
     ├── urico_logo_dark.svg
-    └── urico_logo_light.svg
+    └── urico_logo_light.webp
 ```
 
 ## Naming Conventions

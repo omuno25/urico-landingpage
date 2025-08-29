@@ -1,27 +1,39 @@
 .st-mobile-navbar-section {
   &__navbar {
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-    padding-bottom: 0.91rem;
-    padding-top: 0.92rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding-top: 0.5rem;
+
+    .navbar .navbar-nav > a {
+      color: var(--st-color-base-white);
+      font-weight: 600;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+      }
+    }
 
     .nav-link.active {
-      color: var(--st-color-primary-500);
+      color: var(--st-color-base-white);
+      background-color: rgba(255, 255, 255, 0.3);
     }
-    .navbar-toggler {
-      border: none;
-      color: transparent;
-    }
+  }
 
-    .navbar-nav {
-      padding-left: var(--st-spacing-02);
-      padding-right: var(--st-spacing-02);
-    }
-
-    .nav-link {
-      font-size: var(--st-font-size-03);
-      font-weight: 600;
-      padding-bottom: var(--st-spacing-04);
-      padding-top: var(--st-spacing-04);
-    }
+  // Sticky navbar effect
+  &__navbar.sticky {
+    background-color: var(--st-color-primary-900);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   }
 }
