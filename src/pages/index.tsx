@@ -14,6 +14,7 @@ import AboutSection from '../common/components/sections/AboutSection';
 import { FooterCommon } from '../common/components/common';
 import FrameSection from '../common/components/sections/FrameSection';
 import OrderSection from '../common/components/sections/OrderSection';
+import MobileAboutSection from '../common/components/sections/MobileAboutSection';
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -33,7 +34,7 @@ export default function Home({ metadata }: { metadata: typeof metadataJson }) {
         <main>
           <MobileNavBarSection />
           <MobileCarouselSection />
-          <AboutSection />
+          <MobileAboutSection />
           <OrderSection />
           <FrameSection />
           <MenuSection />

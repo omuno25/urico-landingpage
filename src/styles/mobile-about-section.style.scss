@@ -1,0 +1,50 @@
+.st-mobile-about-section {
+  &__container {
+    background-color: #f5f5f5;
+    &__row {
+      padding: var(--st-spacing-05);
+    }
+
+    &__text-left {
+      &__title {
+        text-align: center;
+        font-size: var(--st-font-size-07);
+        color: var(--st-color-primary-900);
+        font-weight: 700;
+        margin-bottom: var(--st-spacing-05);
+      }
+
+      &__description {
+        font-size: var(--st-font-size-03);
+        color: var(--st-color-primary-900);
+        font-weight: 400;
+        line-height: 1.7;
+        text-align: justify;
+        margin-bottom: var(--st-spacing-05);
+      }
+    }
+
+    &__image-right {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition:
+        transform 220ms ease,
+        box-shadow 220ms ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      img {
+        object-fit: cover;
+        transition: transform 220ms ease;
+      }
+
+      &:hover img {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
